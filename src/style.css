@@ -1,29 +1,125 @@
-html {
+* {
     margin: 0;
     padding: 0;
-    font-family: "Montserrat";
+    background-color: #F7F6F2;
+}
+
+/* Header e Navbar */
+
+.nav-logo {
+    color: #5a5a55;
+    font-family: 'DM Sans';
+}
+
+.nav-logo>span {
+    color: #2A6EF5;
 }
 
 header {
+    align-items: center;
+    border-bottom: 1px solid #D7D7D7;
     display: flex;
     justify-content: space-between;
+    padding: 10px 60px;
+}
+
+header div {
+    font-size: 13px;
+    font-family: 'Syne';
+}
+
+header>span {
+    font-size: 14px;
+    font-family: 'DM Sans';
+    color: #5A5A55
+}
+
+.nav-links>li {
     align-items: center;
+    display: inline-flex;
+    margin: 5px;
+    font-size: 14px;
+    font-family: 'DM Sans';
 }
 
-.paginas {
-    margin-left: 15px;
+.nav-links a {
+    color: #5A5A55;
+    text-decoration: none;
 }
 
-section > div {
-    display: flex;
+/* Corpo do site */
+
+body {
+    background: #f7f6f2;
+    color: #1a1a18;
+    font-size: 16px;
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-.sobre > div {
-    margin: 5px
+body>section {
+    margin-top: 15px;
 }
+
+/* Apresentação */
+
+.introducao {
+    padding: 20px 60px;
+}
+
+.introducao h1 {
+    font-family: 'Syne';
+}
+
+.subtitulo {
+    color: #A0A098;
+    margin-top: 10px;
+}
+
+.apresentacao {
+    margin-top: 20px;
+}
+
+/* Bolinha piscando do "Bora codar" */
+.bora-codar {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: #2A6EF5;
+    background: var(#000);
+    border: 1px solid #c5d8ff;
+    padding: 5px 14px;
+    border-radius: 100px;
+    margin-bottom: 32px;
+    letter-spacing: .5px;
+}
+
+.bora-codar::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: #2a6ef5;
+    border-radius: 50%;
+    animation: pulse 2s ease infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1)
+    }
+
+    50% {
+        opacity: .4;
+        transform: scale(.8)
+    }
+}
+
+
+
 /* Todos os id's da aplicação */
-
-#foto {
-    width: 220px;
-    border-radius: 10px;
-}
