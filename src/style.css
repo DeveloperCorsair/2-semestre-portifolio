@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    background-color: #F7F6F2;
 }
 
 /* Header e Navbar */
@@ -20,7 +19,7 @@ header {
     border-bottom: 1px solid #D7D7D7;
     display: flex;
     justify-content: space-between;
-    padding: 10px 60px;
+    padding: 20px 60px;
 }
 
 header div {
@@ -28,16 +27,16 @@ header div {
     font-family: 'Syne';
 }
 
-header>span {
+header > span {
     font-size: 14px;
     font-family: 'DM Sans';
     color: #5A5A55
 }
 
-.nav-links>li {
+.nav-links > li {
     align-items: center;
     display: inline-flex;
-    margin: 5px;
+    margin-inline: 15px;
     font-size: 14px;
     font-family: 'DM Sans';
 }
@@ -64,6 +63,9 @@ body>section {
 
 /* Apresentação */
 
+h1 {
+    font-size: 45px;
+}
 .introducao {
     padding: 20px 60px;
 }
@@ -77,8 +79,10 @@ body>section {
     margin-top: 10px;
 }
 
-.apresentacao {
-    margin-top: 20px;
+.grid-apresentacao {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
 }
 
 /* Bolinha piscando do "Bora codar" */
@@ -120,6 +124,79 @@ body>section {
     }
 }
 
+.painel-branco {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 15px;
+    counter-reset: lines;
+}
 
+.painel-pontos {
+    display: flex;
+    gap: 7px;
+    margin-bottom: 15px;
+}
+
+.cl {
+    display: flex;
+    gap: 20px;
+}
+
+.cl::before {
+    counter-increment: lines;
+    content: counter(lines);
+    color: #000;
+    opacity: .6;
+    min-width: 14px;
+    text-align: right;
+    user-select: none;
+    font-size: 16px;
+}
+
+.pr {
+    color: #2a6ef5;
+}
+
+.kw {
+    color: #c44a6e;
+}
+
+.str {
+    color: #2a8a5a;
+}
+
+.num {
+    color: #d4753a;
+}
+
+.cm {
+    font-style: italic;
+    color: #a0a098;
+}
+
+.fn {
+    color: #7b52d4;
+}
 
 /* Todos os id's da aplicação */
+
+#ponto-r {
+    background-color: #FF5F57;
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+}
+
+#ponto-y {
+    background-color: #FEBC2E;
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+}
+
+#ponto-g {
+    background-color: #28C840;
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+}
