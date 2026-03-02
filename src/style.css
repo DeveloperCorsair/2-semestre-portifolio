@@ -1,4 +1,4 @@
-* {
+*::after {
     margin: 0;
     padding: 0;
 }
@@ -27,13 +27,13 @@ header div {
     font-family: 'Syne';
 }
 
-header > span {
+header>span {
     font-size: 14px;
     font-family: 'DM Sans';
     color: #5A5A55
 }
 
-.nav-links > li {
+.nav-links>li {
     align-items: center;
     display: inline-flex;
     margin-inline: 15px;
@@ -63,26 +63,39 @@ body>section {
 
 /* Apresentação */
 
-h1 {
-    font-size: 45px;
-}
 .introducao {
     padding: 20px 60px;
 }
 
-.introducao h1 {
+h1 {
     font-family: 'Syne';
+    font-size: 45px;
+    line-height: 1;
+    margin: 0;
+}
+
+.container-1>h1 {
+    display: flex;
+    align-items: flex-start;
 }
 
 .subtitulo {
     color: #A0A098;
-    margin-top: 10px;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .grid-apresentacao {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 30px;
+    grid-template-columns: 1.5fr 1fr;
+}
+
+.aprensetacao-btn {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+
 }
 
 /* Bolinha piscando do "Bora codar" */
@@ -126,9 +139,14 @@ h1 {
 
 .painel-branco {
     background-color: #fff;
+    border: 1px solid #e8e5df;
     border-radius: 15px;
-    padding: 15px;
     counter-reset: lines;
+    font-family: 'JetBrains Mono';
+    padding: 24px 28px;
+    line-height: 1.95;
+    box-shadow: 0 4px 40px rgba(0, 0, 0, .07);
+    min-width: 320px;
 }
 
 .painel-pontos {
@@ -137,6 +155,7 @@ h1 {
     margin-bottom: 15px;
 }
 
+/* Contagem das linhas do painel com counter */
 .cl {
     display: flex;
     gap: 20px;
@@ -153,6 +172,7 @@ h1 {
     font-size: 16px;
 }
 
+/* Cores das palavras do painel */
 .pr {
     color: #2a6ef5;
 }
@@ -180,6 +200,34 @@ h1 {
 
 /* Todos os id's da aplicação */
 
+#descricao {
+    font-size: 17px;
+    color: #5a5a55;
+    font-weight: 300;
+    max-width: 549px;
+    line-height: 1.75;
+    margin-bottom: 48px;
+}
+
+/* Aprensetação */
+#btn-projetos {
+    align-items: center;
+    display: inline-flex;
+    background-color: #1A1A18;
+    border-radius: 12px;
+    color: #F7F6F2;
+    text-decoration: none;
+    padding: 12px 18px;
+}
+
+#btn-contatos {
+    align-items: center;
+    display: inline-flex;
+    color: #5A5A55;
+    text-decoration: none;
+}
+
+/* Painel Branco */
 #ponto-r {
     background-color: #FF5F57;
     border-radius: 100%;
