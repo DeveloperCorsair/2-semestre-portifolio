@@ -67,6 +67,11 @@ body>section {
     padding: 20px 60px;
 }
 
+.sobre-mim {
+    margin-top: 50px;
+    padding: 20px 60px;
+}
+
 h1 {
     font-family: 'Syne';
     font-size: 45px;
@@ -196,6 +201,27 @@ h1 {
 
 .fn {
     color: #7b52d4;
+}
+
+/* SOBRE MIM */
+
+.quadro-foto {
+    background-color: #fff;
+    border: 1px solid #e8e5df;
+    border-radius: 15px;
+    box-shadow: 0 4px 40px rgba(0, 0, 0, .07);
+    min-width: 320px;
+}
+
+.foto {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+}
+
+.foto img {
+    border-radius: 15px;
 }
 
 /* Todos os id's da aplicação */
