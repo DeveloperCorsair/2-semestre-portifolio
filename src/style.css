@@ -67,11 +67,6 @@ body>section {
     padding: 20px 60px;
 }
 
-.sobre-mim {
-    margin-top: 50px;
-    padding: 20px 60px;
-}
-
 h1 {
     font-family: 'Syne';
     font-size: 45px;
@@ -93,7 +88,9 @@ h1 {
 
 .grid-apresentacao {
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 1.5fr 450px;
+    align-items: center;
+    gap: 40px;
 }
 
 .aprensetacao-btn {
@@ -205,12 +202,20 @@ h1 {
 
 /* SOBRE MIM */
 
+.sobre-mim {
+    margin-top: 50px;
+    padding: 40px 60px;
+}
+
 .quadro-foto {
+    align-items: center;
     background-color: #fff;
     border: 1px solid #e8e5df;
     border-radius: 15px;
     box-shadow: 0 4px 40px rgba(0, 0, 0, .07);
-    min-width: 320px;
+    display: flex;
+    justify-content: center;
+    width: 450px;
 }
 
 .foto {
@@ -222,6 +227,8 @@ h1 {
 
 .foto img {
     border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
 }
 
 /* Todos os id's da aplicação */
