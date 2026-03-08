@@ -325,6 +325,7 @@ h1 {
 
 .grid-habilidades {
     display: grid;
+    gap: 70px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     margin-top: 40px;
@@ -384,6 +385,30 @@ h1 {
     color: #9a9a92;
     min-width: 30px;
     text-align: right;
+}
+
+.tech-soft {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.hab-tech {
+    background-color: #F0EDE6;
+    border: 1px solid #A0A098;
+    border-radius: 14px;
+    color: #5A5A55;
+    padding: 4px 14px;
+
+}
+
+.hab-soft {
+    background-color: #EEF3FF;
+    border: 1px solid #C5D8FF;
+    border-radius: 14px;
+    color: #2A6EF5;
+    padding: 4px 14px;
 }
 
 /* Todos os id's da aplicação */
