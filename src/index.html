@@ -10,6 +10,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@300;400;500&display=swap"
         rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./img/logo_branca.png">
 </head>
@@ -81,31 +84,55 @@
     </section>
 
     <section class="sobre-mim">
-        <div class="grid-apresentacao">
+        <div class="grid-sobre-mim">
             <div class="container-2">
-                <span class="">// 01 - Sobre mim</span>
+                <span class="sobre-mim-label">// 01 - Sobre mim</span>
                 <h1>Quem está por trás do código</h1>
 
-                <div>
+                <div class="text-sobre-mim">
                     <p>
-                        Sou um desenvolvedor full stack baseado em São Paulo com mais de 3 anos de experiência
-                        construindo
-                        produtos digitais do zero até a produção.
-
-                        Gosto de trabalhar em projetos onde design e engenharia se encontram — onde cada decisão técnica
+                        Sou um desenvolvedor <strong>full stack</strong> baseado em São Paulo com mais de 3 anos de
+                        experiência
+                        construindo produtos digitais do zero até a produção.
+                    </p>
+                    <p>
+                        Gosto de trabalhar em projetos onde <strong>design e engenharia</strong> se encontram — onde
+                        cada decisão técnica
                         importa tanto quanto a experiência do usuário final.
-
+                    </p>
+                    <p>
                         Quando não estou codando, provavelmente estou contribuindo com open source, lendo sobre
-                        arquitetura
-                        de software ou tentando melhorar meu café. ☕
+                        arquitetura de software ou tentando melhorar meu café. ☕
                     </p>
                 </div>
             </div>
             <div class="quadro-foto">
-                <div class="foto">
-                    <img src="https://th.bing.com/th/id/R.f2150e4b71022745d31b4054c21a7c8f?rik=IodvuvrWopwfmQ&pid=ImgRaw&r=0"
-                        alt="">
+                <div class="painel-pontos">
+                    <div id="ponto-r"></div>
+                    <div id="ponto-y"></div>
+                    <div id="ponto-g"></div>
                 </div>
+                <div class="cb-header">
+                    <div class="dots">
+                        <div class="ponto-r"></div>
+                        <div class="ponto-y"></div>
+                        <div class="ponto-g"></div>
+                    </div>
+                    <span class="cb-title">dev-profile.ts</span>
+                </div>
+                <div class="foto">
+                    <img src="./img/1henrique.jpg" alt="">
+                </div>
+            </div>
+
+            <!-- Cards -->
+            <div class="cards">
+                <div class="cards-sobre"><span class="cards-num">3</span> <span class="cards-text">// anos de xp</span>
+                </div>
+                <div class="cards-sobre"><span class="cards-num">2</span> <span class="cards-text">// projetos</span>
+                </div>
+                <div class="cards-sobre"><span class="cards-num">3</span> <span class="cards-text">// clt's</span></div>
+                <div class="cards-sobre"><span class="cards-num">∞</span> <span class="cards-text">// cafés</span></div>
             </div>
         </div>
     </section>

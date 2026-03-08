@@ -89,7 +89,7 @@ h1 {
 .grid-apresentacao {
     display: grid;
     grid-template-columns: 1.5fr 450px;
-    align-items: center;
+    align-items: start;
     gap: 40px;
 }
 
@@ -202,9 +202,31 @@ h1 {
 
 /* SOBRE MIM */
 
+.grid-sobre-mim {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1.5fr 450px;
+    gap: 40px;
+    justify-items: start;
+}
+
 .sobre-mim {
     margin-top: 50px;
     padding: 40px 60px;
+}
+
+.sobre-mim-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--syn-comment);
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    display: block;
+    color: #a0a098;
+}
+
+.text-sobre-mim {
+    font-family: 'Inter';
 }
 
 .quadro-foto {
@@ -213,22 +235,78 @@ h1 {
     border: 1px solid #e8e5df;
     border-radius: 15px;
     box-shadow: 0 4px 40px rgba(0, 0, 0, .07);
+    display: grid;
+    grid-row: span 2;
+    align-self: center;
+    justify-self: center;
+    padding: 15px;
+}
+
+.cb-header {
     display: flex;
-    justify-content: center;
-    width: 450px;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 18px;
+    border-bottom: 1px solid #e8e5df;
+    background: var(--code-bg);
+}
+
+.cb-header .pontos {
+    display: flex;
+    gap: 5px;
+}
+
+.cb-header .ponto {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
 }
 
 .foto {
     align-items: center;
     display: flex;
     justify-content: center;
-    padding: 24px;
 }
 
 .foto img {
     border-radius: 15px;
     width: 100%;
-    max-width: 400px;
+    max-width: 350px;
+    max-height: 460px;
+}
+
+/* Sobre mim - Cards */
+
+.cards {
+    display: grid;
+    grid-template-columns: 240px 240px;
+    gap: 30px;
+}
+
+.cards-sobre {
+    background-color: #FFF;
+    border: 2px solid #E8E5DF;
+    border-radius: 8px;
+    padding: 14px 24px;
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+.cards-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.cards-text {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: #9a9a92;
+    letter-spacing: .5px;
+
 }
 
 /* Todos os id's da aplicação */
