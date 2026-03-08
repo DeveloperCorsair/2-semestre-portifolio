@@ -60,25 +60,31 @@
             </div>
 
             <div class="painel-branco">
-                <div class="painel-pontos">
-                    <div id="ponto-r"></div>
-                    <div id="ponto-y"></div>
-                    <div id="ponto-g"></div>
+                <div class="cb-header">
+                    <div class="pontos">
+                        <div class="ponto" id="ponto-r"></div>
+                        <div class="ponto" id="ponto-y"></div>
+                        <div class="ponto" id="ponto-g"></div>
+                    </div>
+                    <span class="cb-title">dev-henrique.ts</span>
                 </div>
 
                 <!-- Informações do painel branco -->
-                <div class="cl"> <span class="kw"> const </span> <span class="pr"> dev </span> = { </div>
-                <div class="cl"> <span class="pr"> nome: </span> <span class="str"> "Henrique"</span> , </div>
-                <div class="cl"> <span class="pr"> função: </span> <span class="str"> "Desenvolvedor Full Stack" </span>
-                    , </div>
-                <div class="cl"> <span class="pr"> xp: </span> <span class="num"> 3, </span> <span class="cm"> // anos
-                    </span> </div>
-                <div class="cl"> <span class="pr"> stack </span> [ <span class="str"> "React" </span> , <span
-                        class="str"> "Node.js" </span> ] </div>
-                <div class="cl"> <span> } </span> </div>
-                <div class="cl"> <span class="cm"> // Codando 🚀 </span> </div>
-                <div class="cl"> <span class="pr"> &nbsp; </span> </div>
-                <div class="cl"> <span class="fn"> console.log </span> ( <span class="pr">dev</span> ) </div>
+                <div class="painel-info">
+                    <div class="cl"> <span class="kw"> const </span> <span class="pr"> dev </span> = { </div>
+                    <div class="cl"> <span class="pr"> nome: </span> <span class="str"> "Henrique"</span> , </div>
+                    <div class="cl"> <span class="pr"> função: </span> <span class="str"> "Desenvolvedor Full Stack"
+                        </span>, </div>
+                    <div class="cl"> <span class="pr"> xp: </span> <span class="num"> 3, </span> <span class="cm"> //
+                            anos </span> </div>
+                    <div class="cl"> <span class="pr"> stack </span> [ <span class="str"> "React" </span> , <span
+                            class="str"> "Node.js" </span> ] </div>
+                    <div class="cl"> <span> } </span> </div>
+                    <div class="cl"> <span class="cm"> // Codando 🚀 </span> </div>
+                    <div class="cl"> <span class="pr"> &nbsp; </span> </div>
+                    <div class="cl"> <span class="fn"> console.log </span> ( <span class="pr">dev</span> ) </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -89,7 +95,7 @@
                 <span class="sobre-mim-label">// 01 - Sobre mim</span>
                 <h1>Quem está por trás do código</h1>
 
-                <div class="text-sobre-mim">
+                <div id="text-sobre-mim">
                     <p>
                         Sou um desenvolvedor <strong>full stack</strong> baseado em São Paulo com mais de 3 anos de
                         experiência
@@ -112,16 +118,9 @@
                     <div id="ponto-y"></div>
                     <div id="ponto-g"></div>
                 </div>
-                <div class="cb-header">
-                    <div class="dots">
-                        <div class="ponto-r"></div>
-                        <div class="ponto-y"></div>
-                        <div class="ponto-g"></div>
-                    </div>
-                    <span class="cb-title">dev-profile.ts</span>
-                </div>
+
                 <div class="foto">
-                    <img src="./img/1henrique.jpg" alt="">
+                    <img src="./img/1henrique.jpg" alt="foto_henrique">
                 </div>
             </div>
 
@@ -133,6 +132,93 @@
                 </div>
                 <div class="cards-sobre"><span class="cards-num">3</span> <span class="cards-text">// clt's</span></div>
                 <div class="cards-sobre"><span class="cards-num">∞</span> <span class="cards-text">// cafés</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section class="habilidades">
+        <span class="sobre-mim-label">// 02 — habilidades</span>
+        <h1>Stack & tecnologias</h1>
+        
+        <div class="grid-habilidades">
+            <!-- Front-end -->
+            <div>
+                <span class="hab-label">Front-end</span>
+                <div class="hab-item">
+                    <span class="hab-nome">React / Next</span>
+                    <div class="hab-barra">
+                        <div class="hab-linha" style="width:90%;animation-delay:.1s"></div>
+                    </div>
+                    <span class="hab-porcentagem">90%</span>
+                </div>
+                <div class="hab-item">
+                    <span class="hab-nome">TypeScript</span>
+                    <div class="hab-barra">
+                        <div class="hab-linha" style="width:85%;animation-delay:.2s"></div>
+                    </div>
+                    <span class="hab-porcentagem">85%</span>
+                </div>
+                <div class="hab-item">
+                    <span class="hab-nome">CSS / Tailwind</span>
+                    <div class="hab-barra">
+                        <div class="hab-linha" style="width:88%;animation-delay:.3s"></div>
+                    </div>
+                    <span class="hab-porcentagem">88%</span>
+                </div>
+            </div>
+
+            <!-- Ferramentas -->
+            <div >
+                <span class="hab-label">Ferramentas</span>
+
+                <!-- Tecnologias -->
+                <div>
+                    <span>Git</span>
+                    <span>Docker</span>
+                    <span>AWS</span>
+                    <span>Linux</span>
+                    <span>Figma</span>
+                    <span>API REST</span>
+                    <span>Vercel</span>
+                </div>
+            </div>
+
+            <!-- Back-end -->
+            <div >
+                <span class="hab-label">back-end</span>
+
+                <div class="hab-item">
+                    <span class="hab-nome">Node.js</span>
+                    <div class="hab-barra">
+                        <div class="hab-linha" style="width:82%;animation-delay:.4s"></div>
+                    </div>
+                    <span class="hab-porcentagem">82%</span>
+                </div>
+                <div class="hab-item">
+                    <span class="hab-nome">Python</span>
+                    <div class="hab-barra">
+                        <div class="hab-linha" style="width:70%;animation-delay:.5s"></div>
+                    </div>
+                    <span class="hab-porcentagem">70%</span>
+                </div>
+                <div class="hab-item">
+                    <span class="hab-nome">PostgreSQL</span>
+                    <div class="hab-barra">
+                        <div class="hab-linha" style="width:75%;animation-delay:.6s"></div>
+                    </div>
+                    <span class="hab-porcentagem">75%</span>
+                </div>
+            </div>
+
+            <!-- Estudando agora -->
+            <div>
+                <span class="hab-label">Estudando agora</span>
+                <!-- Matérias diversas -->
+                <div>
+                    <span>Estrutura de Dados</span>
+                    <span>Inglês</span>
+                </div>
             </div>
         </div>
     </section>
