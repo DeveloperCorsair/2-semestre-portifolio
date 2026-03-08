@@ -4,7 +4,6 @@
 }
 
 /* Header e Navbar */
-
 .nav-logo {
     color: #5a5a55;
     font-family: 'DM Sans';
@@ -47,7 +46,6 @@ header>span {
 }
 
 /* Corpo do site */
-
 body {
     background: #f7f6f2;
     color: #1a1a18;
@@ -61,12 +59,16 @@ body>section {
     margin-top: 15px;
 }
 
-/* Apresentação */
-
-.introducao {
-    padding: 20px 60px;
+.subtitulo-label {
+    color: #a0a098;
+    display: block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
 }
 
+/* Apresentação */
 h1 {
     font-family: 'Syne';
     font-size: 45px;
@@ -232,27 +234,12 @@ h1 {
 }
 
 /* SOBRE MIM */
-
 .grid-sobre-mim {
     align-items: center;
     display: grid;
     grid-template-columns: 1.5fr 450px;
     gap: 40px;
     justify-items: start;
-}
-
-.sobre-mim {
-    margin-top: 50px;
-    padding: 40px 60px;
-}
-
-.sobre-mim-label {
-    color: #a0a098;
-    display: block;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 1px;
-    margin-bottom: 16px;
 }
 
 .quadro-foto {
@@ -283,7 +270,6 @@ h1 {
 }
 
 /* Sobre mim - Cards */
-
 .cards {
     display: grid;
     grid-template-columns: 240px 240px;
@@ -317,12 +303,6 @@ h1 {
 }
 
 /* Habilidades */
-.habilidades {
-    background-color: #ffffff;
-    margin-top: 70px;
-    padding: 70px 60px;
-}
-
 .grid-habilidades {
     display: grid;
     gap: 70px;
@@ -422,7 +402,11 @@ h1 {
     margin-bottom: 48px;
 }
 
-/* Aprensetação */
+/* ID's Apresentação */
+#introducao {
+    padding: 20px 60px;
+}
+
 #btn-projetos {
     align-items: center;
     display: inline-flex;
@@ -462,7 +446,19 @@ h1 {
     height: 10px;
 }
 
-/* Id's Sobre mim */
+/* ID's Sobre mim */
+#sobre-mim {
+    margin-top: 50px;
+    padding: 40px 60px;
+}
+
 #text-sobre-mim {
     font-family: 'Inter';
+}
+
+/* ID's Habilidades */
+#habilidades {
+    background-color: #ffffff;
+    margin-top: 70px;
+    padding: 70px 60px;
 }
