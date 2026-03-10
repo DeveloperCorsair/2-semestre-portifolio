@@ -52,6 +52,7 @@ body {
     font-size: 16px;
     font-family: 'DM Sans', sans-serif;
     line-height: 1.6;
+    margin: 0px;
     overflow-x: hidden;
 }
 
@@ -90,7 +91,7 @@ h1 {
 
 .grid-apresentacao {
     display: grid;
-    grid-template-columns: 1.5fr 450px;
+    grid-template-columns: 1.5fr 490px;
     align-items: start;
     gap: 40px;
 }
@@ -403,18 +404,18 @@ h1 {
     align-items: center;
     background-color: #FFF;
     border: 1px solid #E8E5DF;
-    border-radius: 12px; 
+    border-radius: 12px;
     display: grid;
     padding: 16px;
     width: 320px;
     min-width: 300px;
 }
 
-.cards-proj-body > span{
+.cards-proj-body>span {
     margin-bottom: 16px;
 }
 
-.proj-title{
+.proj-title {
     margin: 22px 0 8px 0;
     font-family: 'Syne';
     font-size: 20px;
@@ -426,22 +427,113 @@ h1 {
     justify-content: space-between;
 }
 
-.cards-git-header > div {
+.cards-git-header>div {
     background-color: #F0EDE6;
     border: 1px solid #DDD9CF;
     border-radius: 3px;
     padding: 2px;
 }
 
-.cards-git-header > a {
-    color: #9A9A92;    
+.cards-git-header>a {
+    color: #9A9A92;
     font-family: 'JetBrains Mono';
     text-decoration: none;
-} 
+}
 
-.cards-git-header > a:hover {
+.cards-git-header>a:hover {
     text-decoration: underline;
-} 
+}
+
+/* Contato */
+.contato-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin: 25px 0;
+    align-items: start;
+}
+
+.codigo-contato {
+    background: rgba(255, 255, 255, .04);
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 12px;
+    counter-reset: lines;
+    padding: 32px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.cl-escuro::before {
+    color: rgba(255, 255, 255, .25);
+    counter-increment: lines;
+    content: counter(lines);
+    font-size: 14px;
+    min-width: 14px;
+    opacity: .6;
+    text-align: right;
+    user-select: none;
+}
+
+.contato-code .cm {
+    color: rgba(255, 255, 255, .25);
+    font-style: italic;
+}
+
+.contato-code .kw {
+    color: #7ba3f5;
+}
+
+.contato-code .str {
+    color: #79c996;
+}
+
+.contato-code .fn {
+    color: #b39af5;
+}
+
+.contato-code .pr {
+    color: #80b8f5;
+}
+
+.contatos-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.contato-link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    color: rgba(247, 246, 242, .65);
+    font-size: 15px;
+    transition: color .2s;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .07);
+}
+
+.contato-link:hover {
+    color: #f7f6f2;
+}
+
+/* Footer */
+
+footer {
+    align-items: center;
+    background: #1a1a18;
+    border-top: 1px solid rgba(255, 255, 255, .06);
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 60px;
+}
+
+footer span {
+    color: rgba(255, 255, 255, .2);
+    font-family: 'JetBrains Mono';
+    font-size: 11px;
+}
 
 
 /* Todos os id's da aplicação */
@@ -517,6 +609,20 @@ h1 {
 }
 
 /* Id's Projetos */
-#projetos { 
+#projetos {
     padding: 70px 60px;
+}
+
+/* Id's Contatos */
+#contato {
+    background-color: #1A1A18;
+    padding: 70px 60px;
+}
+
+#contato-desc {
+    color: rgba(247, 246, 242, .6);
+    font-size: 17px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    line-height: 1.8;
 }
