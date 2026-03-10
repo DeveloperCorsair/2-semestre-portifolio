@@ -1,0 +1,285 @@
+/* ============================================
+   RESPONSIVO
+   ============================================ */
+
+/* Tablet grande / landscape (max 1024px) */
+@media (max-width: 1024px) {
+
+    header {
+        padding: 16px 30px;
+    }
+
+    #introducao,
+    #sobre-mim,
+    #habilidades,
+    #educacao,
+    #cursos,
+    #projetos,
+    #contato {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    footer {
+        padding: 20px 30px;
+    }
+
+    .grid-apresentacao {
+        grid-template-columns: 1fr;
+    }
+
+    .painel-branco {
+        min-width: unset;
+        width: 100%;
+    }
+
+    .grid-sobre-mim {
+        grid-template-columns: 1fr;
+    }
+
+    .quadro-foto {
+        grid-row: unset;
+        width: 100%;
+        max-width: 420px;
+        justify-self: center;
+    }
+
+    .cards {
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+    }
+
+    .cards-projetos {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cards-proj-body {
+        width: 100%;
+        min-width: unset;
+        max-width: 420px;
+    }
+
+    .contato-body {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .codigo-contato {
+        font-size: 13px;
+        padding: 24px;
+    }
+}
+
+/* Tablet retrato / mobile grande (max 768px) */
+@media (max-width: 768px) {
+
+    /* Header - esconde título e nav vira hamburger simples */
+    header {
+        padding: 14px 20px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    header>span {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .nav-links>li {
+        margin-inline: 6px;
+        font-size: 12px;
+    }
+
+    /* Títulos menores */
+    h1 {
+        font-size: 32px;
+    }
+
+    #introducao,
+    #sobre-mim,
+    #habilidades,
+    #educacao,
+    #cursos,
+    #projetos,
+    #contato {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #habilidades {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        margin-top: 40px;
+    }
+
+    #projetos {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    #contato {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    /* Apresentação */
+    .grid-apresentacao {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    #descricao {
+        font-size: 15px;
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .aprensetacao-btn {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    /* Sobre mim */
+    .grid-sobre-mim {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .quadro-foto {
+        max-width: 100%;
+    }
+
+    .foto img {
+        max-width: 100%;
+        max-height: 340px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    /* Habilidades */
+    .grid-habilidades {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin-top: 24px;
+    }
+
+    .hab-nome {
+        min-width: 90px;
+        font-size: 11px;
+    }
+
+    /* Educação */
+    .educacao-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Projetos */
+    .cards-projetos {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .cards-proj-body {
+        width: 100%;
+        max-width: 100%;
+        min-width: unset;
+    }
+
+    /* Contato */
+    .contato-body {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .codigo-contato {
+        font-size: 11px;
+        padding: 18px 14px;
+        overflow-x: auto;
+    }
+
+    .contato-link {
+        font-size: 13px;
+        gap: 10px;
+    }
+
+    /* Footer */
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        padding: 20px;
+    }
+}
+
+/* Mobile pequeno (max 480px) */
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .nav-links>li {
+        font-size: 11px;
+        margin-inline: 4px;
+    }
+
+    .bora-codar {
+        font-size: 10px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .cards-num {
+        font-size: 28px;
+    }
+
+    .painel-info {
+        padding: 16px 12px;
+        font-size: 13px;
+    }
+
+    .cl::before {
+        font-size: 13px;
+    }
+
+    .edu-card {
+        padding: 20px 18px;
+    }
+
+    .edu-curso {
+        font-size: 15px;
+    }
+
+    #cursos {
+        padding: 40px 20px;
+        margin: 40px 0 60px 0;
+    }
+
+    .curso-item {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+
+    .curso-col-dir {
+        align-items: flex-start;
+        flex-direction: row;
+        gap: 10px;
+    }
+}
