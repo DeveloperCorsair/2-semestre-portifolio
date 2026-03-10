@@ -303,6 +303,137 @@ h1 {
 
 }
 
+/* EDUCATION */
+.educacao-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 10px;
+}
+
+.edu-card {
+    background: #ffffff;
+    border: 1px solid #e8e5df;
+    border-radius: 12px;
+    padding: 28px 32px;
+    position: relative;
+    overflow: hidden;
+    transition: all .25s;
+}
+
+.edu-card:hover {
+    border-color: #ccc;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, .07);
+}
+
+.edu-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 3px;
+    background: #2a6ef5;
+}
+
+.edu-form {
+    display: inline-block;
+    font-family: 'JetBrains Mono';
+    font-size: 10px;
+    padding: 3px 10px;
+    border-radius: 100px;
+    background: #eef3ff;
+    color: #2a6ef5;
+    border: 1px solid #c5d8ff;
+    margin-bottom: 16px;
+}
+
+.edu-curso {
+    font-family: 'Syne';
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -.3px;
+    margin-bottom: 6px;
+}
+
+.edu-ins {
+    font-size: 14px;
+    color: #2a6ef5;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.edu-periodo {
+    font-family: 'JetBrains Mono';
+    font-size: 11px;
+    color: #9a9a92;
+}
+
+.edu-desc {
+    font-size: 14px;
+    color: #5a5a55;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-top: 12px;
+}
+
+/* Cursos Complementares */
+
+.lista-cursos {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.curso-item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 24px;
+    padding: 22px 0;
+    border-bottom: 1px solid #ffffff;
+}
+
+.curso-item:last-child {
+    border-bottom: none;
+}
+
+.curso-col-left {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.curso-nome {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.curso-provider {
+    font-size: 13px;
+    color: #5a5a55;
+    font-weight: 300;
+}
+
+.curso-col-dir {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.curso-hora {
+    font-family: 'JetBrains Mono';
+    font-size: 11px;
+    color: #9a9a92;
+}
+
+.curso-ano {
+    font-family: 'JetBrains Mono';
+    font-size: 11px;
+}
+
 /* Habilidades */
 .grid-habilidades {
     display: grid;
@@ -313,7 +444,7 @@ h1 {
 }
 
 .hab-label {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'JetBrains Mono';
     font-size: 10px;
     color: #a0a098;
     letter-spacing: 1px;
@@ -606,6 +737,19 @@ footer span {
     background-color: #ffffff;
     margin-top: 70px;
     padding: 70px 60px;
+}
+
+/* Id's Educação */
+#educacao {
+    background-color: #f7f6f2;
+    padding: 50px 60px;
+}
+
+/* Id's Cursos complementares */
+#cursos {
+    background-color: #ffffff;
+    padding: 60px 60px;
+    margin: 60px 0 100px 0px;
 }
 
 /* Id's Projetos */
