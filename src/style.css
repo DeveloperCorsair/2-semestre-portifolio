@@ -391,6 +391,59 @@ h1 {
     padding: 4px 14px;
 }
 
+/* Class Projetos */
+.cards-projetos {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.cards-proj-body {
+    align-items: center;
+    background-color: #FFF;
+    border: 1px solid #E8E5DF;
+    border-radius: 12px; 
+    display: grid;
+    padding: 16px;
+    width: 320px;
+    min-width: 300px;
+}
+
+.cards-proj-body > span{
+    margin-bottom: 16px;
+}
+
+.proj-title{
+    margin: 22px 0 8px 0;
+    font-family: 'Syne';
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.cards-git-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cards-git-header > div {
+    background-color: #F0EDE6;
+    border: 1px solid #DDD9CF;
+    border-radius: 3px;
+    padding: 2px;
+}
+
+.cards-git-header > a {
+    color: #9A9A92;    
+    font-family: 'JetBrains Mono';
+    text-decoration: none;
+} 
+
+.cards-git-header > a:hover {
+    text-decoration: underline;
+} 
+
+
 /* Todos os id's da aplicação */
 
 #descricao {
@@ -460,5 +513,10 @@ h1 {
 #habilidades {
     background-color: #ffffff;
     margin-top: 70px;
+    padding: 70px 60px;
+}
+
+/* Id's Projetos */
+#projetos { 
     padding: 70px 60px;
 }
