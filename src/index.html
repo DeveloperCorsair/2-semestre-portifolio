@@ -13,6 +13,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/resp.css">
+    <link rel="stylesheet" href="css/admin.css">
     <link rel="icon" href="./img/logo_branca.png">
 </head>
 
@@ -70,10 +71,15 @@
 
                 <div class="painel-info">
                     <div class="cl"> <span class="kw"> const </span> <span class="pr"> dev </span> = { </div>
-                    <div class="cl"> &nbsp;&nbsp;<span class="pr"> nome: </span> <span class="str"> "Henrique"</span>,</div>
-                    <div class="cl"> &nbsp;&nbsp;<span class="pr"> função: </span> <span class="str"> "Desenvolvedor Full Stack"</span>, </div>
-                    <div class="cl"> &nbsp;&nbsp;<span class="pr"> xp: </span> <span class="num"> 3, </span> <span class="cm"> // anos </span> </div>
-                    <div class="cl"> &nbsp;&nbsp;<span class="pr"> stack </span> [ <span class="str"> "React" </span>, <span class="str"> "Node.js" </span> ]</div>
+                    <div class="cl"> &nbsp;&nbsp;<span class="pr"> nome: </span> <span class="str"> "Henrique"</span>,
+                    </div>
+                    <div class="cl"> &nbsp;&nbsp;<span class="pr"> função: </span> <span class="str"> "Desenvolvedor
+                            Full Stack"</span>, </div>
+                    <div class="cl"> &nbsp;&nbsp;<span class="pr"> xp: </span> <span class="num"> 3, </span> <span
+                            class="cm"> // anos </span> </div>
+                    <div class="cl"> &nbsp;&nbsp;<span class="pr"> stack </span> [ <span class="str"> "React" </span>,
+                        <span class="str"> "Node.js" </span> ]
+                    </div>
                     <div class="cl"> <span> } </span> </div>
                     <div class="cl"> <span class="cm"> // Codando 🚀 </span> </div>
                     <div class="cl"> <span class="pr"> &nbsp; </span> </div>
@@ -115,8 +121,10 @@
             </div>
 
             <div class="cards">
-                <div class="cards-sobre"><span class="cards-num">3</span> <span class="cards-text">// anos de xp</span></div>
-                <div class="cards-sobre"><span class="cards-num">2</span> <span class="cards-text">// projetos</span></div>
+                <div class="cards-sobre"><span class="cards-num">3</span> <span class="cards-text">// anos de xp</span>
+                </div>
+                <div class="cards-sobre"><span class="cards-num">2</span> <span class="cards-text">// projetos</span>
+                </div>
                 <div class="cards-sobre"><span class="cards-num">3</span> <span class="cards-text">// clt's</span></div>
                 <div class="cards-sobre"><span class="cards-num">∞</span> <span class="cards-text">// cafés</span></div>
             </div>
@@ -181,7 +189,7 @@
     <section id="educacao">
         <span class="subtitulo-label">// 03 — formação</span>
         <h1>Formação acadêmica</h1>
-        <div class="educacao-grid">
+        <div class="educacao-grid" id="educacao-grid">
             <div class="edu-card">
                 <span class="edu-form">Tecnólogo</span>
                 <div class="edu-curso">Desenvolvimento de Software Multiplataforma</div>
@@ -234,14 +242,21 @@
             </div>
 
             <div class="codigo-contato">
-                <div class="cl-escuro cl" style="color:rgba(247,246,242,.7)"><span class="cm">// envie uma mensagem</span></div>
-                <div class="cl-escuro cl" style="color:rgba(247,246,242,.7)"><span class="fn">sendMessage</span> ({</div>
-                <div class="cl-escuro cl" style="color:rgba(247,246,242,.7)">&nbsp;&nbsp;<span class="pr">from: </span><span class="str"> "henriquemartin7t@gmail.com"</span>,</div>
-                <div class="cl-escuro cl" style="color:rgba(247,246,242,.7)">&nbsp;&nbsp;<span class="pr">subject: </span><span class="str"> "Projeto muito bom"</span>,</div>
-                <div class="cl-escuro cl" style="color:rgba(247,246,242,.7)">&nbsp;&nbsp;<span class="pr">body: </span><span class="str"> `Oi! Quero...</span></div>
-                <div class="cl-escuro cl" style="color:rgba(247,246,242,.7)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">falar contigo!`</span>,</div>
+                <div class="cl-escuro cl" style="color:rgba(247,246,242,.7)"><span class="cm">// envie uma
+                        mensagem</span></div>
+                <div class="cl-escuro cl" style="color:rgba(247,246,242,.7)"><span class="fn">sendMessage</span> ({
+                </div>
+                <div class="cl-escuro cl" style="color:rgba(247,246,242,.7)">&nbsp;&nbsp;<span class="pr">from:
+                    </span><span class="str"> "henriquemartin7t@gmail.com"</span>,</div>
+                <div class="cl-escuro cl" style="color:rgba(247,246,242,.7)">&nbsp;&nbsp;<span class="pr">subject:
+                    </span><span class="str"> "Projeto muito bom"</span>,</div>
+                <div class="cl-escuro cl" style="color:rgba(247,246,242,.7)">&nbsp;&nbsp;<span class="pr">body:
+                    </span><span class="str"> `Oi! Quero...</span></div>
+                <div class="cl-escuro cl" style="color:rgba(247,246,242,.7)">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">falar contigo!`</span>,</div>
                 <div class="cl-escuro cl" style="color:rgba(247,246,242,.7)"><span>})</span></div>
-                <div class="cl-escuro cl" style="color:rgba(247,246,242,.7)"><span class="cm">// resposta &lt; 24h ✓</span></div>
+                <div class="cl-escuro cl" style="color:rgba(247,246,242,.7)"><span class="cm">// resposta &lt; 24h
+                        ✓</span></div>
             </div>
         </div>
     </section>
@@ -291,32 +306,40 @@
 
             <!-- Abas -->
             <div class="admin-abas">
-                <button class="admin-aba-btn ativa" data-aba="aba-projetos"   onclick="trocarAba('aba-projetos')">Projetos</button>
-                <button class="admin-aba-btn"        data-aba="aba-cursos"    onclick="trocarAba('aba-cursos')">Cursos</button>
-                <button class="admin-aba-btn"        data-aba="aba-textos"    onclick="trocarAba('aba-textos')">Textos</button>
-                <button class="admin-aba-btn"        data-aba="aba-habilidades" onclick="trocarAba('aba-habilidades')">Habilidades</button>
+                <button class="admin-aba-btn ativa" data-aba="aba-projetos"
+                    onclick="trocarAba('aba-projetos')">Projetos</button>
+                <button class="admin-aba-btn" data-aba="aba-cursos" onclick="trocarAba('aba-cursos')">Cursos</button>
+                <button class="admin-aba-btn" data-aba="aba-textos" onclick="trocarAba('aba-textos')">Textos</button>
+                <button class="admin-aba-btn" data-aba="aba-habilidades"
+                    onclick="trocarAba('aba-habilidades')">Habilidades</button>
+                <button class="admin-aba-btn" data-aba="aba-educacao"
+                    onclick="trocarAba('aba-educacao')">Educação</button>
+                <button class="admin-aba-btn" data-aba="aba-educacao"
+                    onclick="trocarAba('aba-educacao')">Formação</button>
             </div>
 
             <!-- Aba: Projetos -->
             <div id="aba-projetos" class="admin-aba-conteudo">
                 <p class="admin-hint">Preencha os campos e clique em adicionar. Para remover, use o botão ✕ no card.</p>
                 <div class="admin-form">
-                    <input id="proj-emoji"  class="admin-input" type="text"  placeholder="Emoji (ex: 🚀)">
-                    <input id="proj-titulo" class="admin-input" type="text"  placeholder="Título *">
-                    <input id="proj-link"   class="admin-input" type="text"  placeholder="Link (Github ou live)">
+                    <input id="proj-emoji" class="admin-input" type="text" placeholder="Emoji (ex: 🚀)">
+                    <input id="proj-titulo" class="admin-input" type="text" placeholder="Título *">
+                    <input id="proj-link" class="admin-input" type="text" placeholder="Link (Github ou live)">
                     <textarea id="proj-desc" class="admin-input admin-textarea" placeholder="Descrição *"></textarea>
-                    <input id="proj-techs"  class="admin-input" type="text"  placeholder="Tecnologias (separadas por vírgula)">
+                    <input id="proj-techs" class="admin-input" type="text"
+                        placeholder="Tecnologias (separadas por vírgula)">
                     <button class="admin-btn-add" onclick="adicionarProjeto()">+ Adicionar Projeto</button>
                 </div>
             </div>
 
             <!-- Aba: Cursos -->
             <div id="aba-cursos" class="admin-aba-conteudo" style="display:none">
-                <p class="admin-hint">Preencha os campos e clique em adicionar. Para remover, use o botão ✕ na lista.</p>
+                <p class="admin-hint">Preencha os campos e clique em adicionar. Para remover, use o botão ✕ na lista.
+                </p>
                 <div class="admin-form">
-                    <input id="curso-nome"      class="admin-input" type="text" placeholder="Nome do curso *">
-                    <input id="curso-provider"  class="admin-input" type="text" placeholder="Instituição *">
-                    <input id="curso-horas"     class="admin-input" type="text" placeholder="Carga horária (ex: 40h)">
+                    <input id="curso-nome" class="admin-input" type="text" placeholder="Nome do curso *">
+                    <input id="curso-provider" class="admin-input" type="text" placeholder="Instituição *">
+                    <input id="curso-horas" class="admin-input" type="text" placeholder="Carga horária (ex: 40h)">
                     <input id="curso-ano-input" class="admin-input" type="text" placeholder="Ano (ex: 2025)">
                     <button class="admin-btn-add" onclick="adicionarCurso()">+ Adicionar Curso</button>
                 </div>
@@ -327,32 +350,49 @@
                 <p class="admin-hint">Edite os textos principais. Deixe em branco para manter o atual.</p>
                 <div class="admin-form">
                     <label class="admin-label-field">Subtítulo (abaixo do nome)</label>
-                    <input id="txt-subtitulo" class="admin-input" type="text" placeholder="// Desenvolvedor de Software">
+                    <input id="txt-subtitulo" class="admin-input" type="text"
+                        placeholder="// Desenvolvedor de Software">
                     <label class="admin-label-field">Descrição (seção de apresentação)</label>
-                    <textarea id="txt-descricao" class="admin-input admin-textarea" placeholder="Desenvolvedor full stack..."></textarea>
+                    <textarea id="txt-descricao" class="admin-input admin-textarea"
+                        placeholder="Desenvolvedor full stack..."></textarea>
                     <label class="admin-label-field">Sobre mim (1º parágrafo) — aceita HTML</label>
-                    <textarea id="txt-sobre" class="admin-input admin-textarea" placeholder="Sou um desenvolvedor..."></textarea>
+                    <textarea id="txt-sobre" class="admin-input admin-textarea"
+                        placeholder="Sou um desenvolvedor..."></textarea>
                     <button class="admin-btn-add" onclick="salvarTextos()">💾 Salvar Textos</button>
                 </div>
             </div>
 
             <!-- Aba: Habilidades -->
             <div id="aba-habilidades" class="admin-aba-conteudo" style="display:none">
-                <p class="admin-hint">Adicione habilidades ao front-end ou back-end. Para remover, use o botão ✕ na barra.</p>
+                <p class="admin-hint">Adicione habilidades ao front-end ou back-end. Para remover, use o botão ✕ na
+                    barra.</p>
                 <div class="admin-form">
                     <select id="hab-grupo" class="admin-input">
                         <option value="frontend">Front-end</option>
                         <option value="backend">Back-end</option>
                     </select>
-                    <input id="hab-nome-input" class="admin-input" type="text"   placeholder="Nome da habilidade *">
-                    <input id="hab-pct"        class="admin-input" type="number" placeholder="Nível % (1–100) *" min="1" max="100">
+                    <input id="hab-nome-input" class="admin-input" type="text" placeholder="Nome da habilidade *">
+                    <input id="hab-pct" class="admin-input" type="number" placeholder="Nível % (1–100) *" min="1"
+                        max="100">
                     <button class="admin-btn-add" onclick="adicionarHabilidade()">+ Adicionar Habilidade</button>
                 </div>
             </div>
 
+            <!-- Aba: Formação Acadêmica -->
+            <div id="aba-educacao" class="admin-aba-conteudo" style="display:none">
+                <p class="admin-hint">Adicione suas formações. Para remover, use o botão ✕ na lista.</p>
+                <div class="admin-form">
+                    <input id="edu-form" class="admin-input" type="text"
+                        placeholder="Nível da formação (ex: Tecnólogo) *">
+                    <input id="edu-curso" class="admin-input" type="text" placeholder="Curso *">
+                    <input id="edu-ins" class="admin-input" type="text" placeholder="Instituição *">
+                    <input id="edu-inicio" class="admin-input" type="text" placeholder="Data de início (ex: 08/2025)">
+                    <input id="edu-fim" class="admin-input" type="text" placeholder="Data de término (ex: 07/2028)">
+                    <button class="admin-btn-add" onclick="adicionarEducacao()">+ Adicionar Formação</button>
+                </div>
+            </div>
         </div>
     </div>
-
 
     <script src="script.js"></script>
 </body>

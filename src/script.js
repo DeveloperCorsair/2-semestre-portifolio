@@ -72,6 +72,7 @@ let habilidades = {
         { nome: "TypeScript", pct: 75 }
     ]
 };
+let educacao = educacaoBase;
 
 let adminLogado = false;
 
@@ -125,6 +126,34 @@ function renderizarProjetos() {
                     <span class="hab-label">Tecnologias</span>
                     <div class="tech-soft">${tagsHTML}</div>
                 </div>
+                ${btnRemover}
+            </div>
+        `;
+    }
+}
+
+
+// ============================================
+// RENDERIZAÇÃO — Educação
+// ============================================
+function renderizarEducacao() {
+    const container = document.getElementById("educacao-grid");
+    if (!container) return;
+    container.innerHTML = "";
+
+    for (let i = 0; i < educacao.length; i++) {
+        const e = educacao[i];
+        const periodo = e.inicio && e.fim ? `// ${e.inicio} – ${e.fim}` : e.inicio ? `// ${e.inicio}` : "";
+        const btnRemover = adminLogado
+            ? `<button class="admin-btn-remover admin-btn-remover--sm" onclick="removerEducacao(${i})">✕ Remover</button>`
+            : "";
+
+        container.innerHTML += `
+            <div class="edu-card">
+                <span class="edu-form">${e.form}</span>
+                <div class="edu-curso">${e.curso}</div>
+                <div class="edu-ins">${e.ins}</div>
+                <div class="edu-periodo">${periodo}</div>
                 ${btnRemover}
             </div>
         `;
@@ -329,7 +358,7 @@ function removerProjeto(i) {
 }
 
 // ============================================
-// AÇÕES — Cursos
+// AÇÕES — Formação Acadêmica
 // ============================================
 
 function adicionarCurso() {
@@ -353,6 +382,32 @@ function removerCurso(i) {
     localStorage.setItem("cursos", JSON.stringify(cursos));
     renderizarCursos();
 }
+
+// ============================================
+// AÇÕES — Cursos
+// ============================================
+
+function adicionarEducacao() {
+    const form   = document.getElementById("edu-form").value.trim();
+    const curso  = document.getElementById("edu-curso").value.trim();
+    const ins    = document.getElementById("edu-ins").value.trim();
+    const inicio = document.getElementById("edu-inicio").value.trim() || "";
+    const fim    = document.getElementById("edu-fim").value.trim()    || "";
+
+    if (!form || !curso || !ins) { alert("Nível, curso e instituição são obrigatórios."); return; }
+
+    educacao.push({ form, curso, ins, inicio, fim });
+    renderizarEducacao();
+    ["edu-form","edu-curso","edu-ins","edu-inicio","edu-fim"].forEach(id => document.getElementById(id).value = "");
+    mostrarFeedback("✓ Formação adicionada!");
+}
+
+function removerEducacao(i) {
+    if (!confirm(`Remover "${educacao[i].curso}"?`)) return;
+    educacao.splice(i, 1);
+    renderizarEducacao();
+}
+
 
 // ============================================
 // AÇÕES — Textos
@@ -421,6 +476,7 @@ renderizarProjetos();
 renderizarCursos();
 renderizarHabilidades();
 configurarEasterEgg();
+renderizarEducacao();
 
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("input-senha").addEventListener("keydown", e => {

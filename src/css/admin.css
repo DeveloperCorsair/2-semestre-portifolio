@@ -1,0 +1,199 @@
+/* ============================================
+   ADMIN — Painel lateral
+   ============================================ */
+
+#painel-admin {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .4);
+    z-index: 999;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.admin-painel-box {
+    background: #fff;
+    border-left: 1px solid #e8e5df;
+    width: 100%;
+    max-width: 420px;
+    height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -10px 0 40px rgba(0, 0, 0, .1);
+}
+
+.admin-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    background: #f0ede6;
+    border-bottom: 1px solid #e8e5df;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.admin-titulo {
+    font-family: 'Syne', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.admin-logout {
+    background: none;
+    border: 1px solid #e8e5df;
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: #9a9a92;
+    cursor: pointer;
+    transition: all .15s;
+}
+
+.admin-logout:hover {
+    border-color: #c44a6e;
+    color: #c44a6e;
+}
+
+.admin-feedback {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: #2a8a5a;
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+/* Abas */
+.admin-abas {
+    display: flex;
+    border-bottom: 1px solid #e8e5df;
+    background: #faf9f6;
+}
+
+.admin-aba-btn {
+    flex: 1;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 10px 6px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: #9a9a92;
+    cursor: pointer;
+    transition: all .15s;
+    letter-spacing: .5px;
+}
+
+.admin-aba-btn:hover {
+    color: #1a1a18;
+}
+
+.admin-aba-btn.ativa {
+    color: #2a6ef5;
+    border-bottom-color: #2a6ef5;
+}
+
+/* Conteúdo das abas */
+.admin-aba-conteudo {
+    padding: 20px;
+}
+
+.admin-hint {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: #a0a098;
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.admin-input {
+    width: 100%;
+    border: 1px solid #e8e5df;
+    border-radius: 8px;
+    padding: 9px 12px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    background: #f7f6f2;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color .2s;
+    color: #1a1a18;
+}
+
+.admin-input:focus {
+    border-color: #2a6ef5;
+}
+
+.admin-textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.admin-label-field {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: #9a9a92;
+    letter-spacing: .5px;
+    margin-top: 4px;
+}
+
+.admin-btn-add {
+    background: #1a1a18;
+    color: #f7f6f2;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    margin-top: 4px;
+    transition: opacity .2s;
+}
+
+.admin-btn-add:hover {
+    opacity: .85;
+}
+
+/* Botões de remover nos cards/lista */
+.admin-btn-remover {
+    background: none;
+    border: 1px solid #e8e5df;
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: #9a9a92;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all .15s;
+    display: block;
+}
+
+.admin-btn-remover:hover {
+    border-color: #c44a6e;
+    color: #c44a6e;
+}
+
+.admin-btn-remover--sm {
+    display: inline-block;
+    margin-top: 0;
+    padding: 2px 7px;
+}
+
+.admin-btn-remover--inline {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 0;
+    margin-left: 8px;
+    padding: 2px 7px;
+}
