@@ -42,26 +42,22 @@
             <span>Bora codar</span>
         </div>
 
-        <!-- Apresentação -->
         <div class="grid-apresentacao">
             <div class="container-1">
                 <h1>HENRIQUE MOREIRA</h1>
-                <span class="subtitulo">// Desenvolvedor de Software</span>
+                <!-- ALTERADO: texto controlado pelo JS via renderizarTextos() -->
+                <span class="subtitulo"></span>
 
                 <div>
-                    <p id="descricao">Desenvolvedor full stack apaixonado por criar interfaces
-                        que encantam e sistemas que escalam. Transformo ideias em
-                        código limpo e produtos que funcionam de verdade.
-                    </p>
+                    <p id="descricao"></p>
                 </div>
 
                 <div class="aprensetacao-btn">
-                    <a href="" id="btn-projetos">Ver Projetos</a>
-                    <a href="" id="btn-contatos">Entre em Contato --></a>
+                    <a href="#projetos" id="btn-projetos">Ver Projetos</a>
+                    <a href="#contato" id="btn-contatos">Entre em Contato --></a>
                 </div>
             </div>
 
-            <!-- Painel Branco com códigos sobre mim -->
             <div class="painel-branco">
                 <div class="cb-header">
                     <div class="pontos">
@@ -72,20 +68,12 @@
                     <span class="cb-title">dev-henrique.ts</span>
                 </div>
 
-                <!-- Informações do painel branco -->
                 <div class="painel-info">
                     <div class="cl"> <span class="kw"> const </span> <span class="pr"> dev </span> = { </div>
-                    <div class="cl"> &nbsp;&nbsp;<span class="pr"> nome: </span> <span class="str"> "Henrique"</span> ,
-                    </div>
-                    <div class="cl"> &nbsp;&nbsp;<span class="pr"> função: </span> <span class="str"> "Desenvolvedor
-                            Full Stack"
-                        </span>, </div>
-                    <div class="cl"> &nbsp;&nbsp;<span class="pr"> xp: </span> <span class="num"> 3, </span> <span
-                            class="cm"> //
-                            anos </span> </div>
-                    <div class="cl"> &nbsp;&nbsp;<span class="pr"> stack </span> [ <span class="str"> "React" </span> ,
-                        <span class="str"> "Node.js" </span> ]
-                    </div>
+                    <div class="cl"> &nbsp;&nbsp;<span class="pr"> nome: </span> <span class="str"> "Henrique"</span>,</div>
+                    <div class="cl"> &nbsp;&nbsp;<span class="pr"> função: </span> <span class="str"> "Desenvolvedor Full Stack"</span>, </div>
+                    <div class="cl"> &nbsp;&nbsp;<span class="pr"> xp: </span> <span class="num"> 3, </span> <span class="cm"> // anos </span> </div>
+                    <div class="cl"> &nbsp;&nbsp;<span class="pr"> stack </span> [ <span class="str"> "React" </span>, <span class="str"> "Node.js" </span> ]</div>
                     <div class="cl"> <span> } </span> </div>
                     <div class="cl"> <span class="cm"> // Codando 🚀 </span> </div>
                     <div class="cl"> <span class="pr"> &nbsp; </span> </div>
@@ -95,23 +83,18 @@
         </div>
     </section>
 
-    <!-- Sobre mim -->
     <section id="sobre-mim">
         <div class="grid-sobre-mim">
             <div class="container-2">
                 <span class="subtitulo-label">// 01 - Sobre mim</span>
                 <h1>Quem está por trás do código</h1>
 
+                <!-- ALTERADO: primeiro parágrafo controlado pelo JS -->
                 <div id="text-sobre-mim">
-                    <p>
-                        Sou um desenvolvedor <strong>full stack</strong> baseado em São Paulo com mais de 3 anos de
-                        experiência
-                        construindo produtos digitais do zero até a produção.
-                    </p>
+                    <p></p>
                     <p>
                         Gosto de trabalhar em projetos onde <strong>design e engenharia</strong> se encontram — onde
-                        cada decisão técnica
-                        importa tanto quanto a experiência do usuário final.
+                        cada decisão técnica importa tanto quanto a experiência do usuário final.
                     </p>
                     <p>
                         Quando não estou codando, provavelmente estou contribuindo com open source, lendo sobre
@@ -119,24 +102,21 @@
                     </p>
                 </div>
             </div>
+
             <div class="quadro-foto">
                 <div class="painel-pontos">
                     <div id="ponto-r"></div>
                     <div id="ponto-y"></div>
                     <div id="ponto-g"></div>
                 </div>
-
                 <div class="foto">
                     <img src="./img/1henrique.jpg" alt="foto_henrique">
                 </div>
             </div>
 
-            <!-- Cards -->
             <div class="cards">
-                <div class="cards-sobre"><span class="cards-num">3</span> <span class="cards-text">// anos de xp</span>
-                </div>
-                <div class="cards-sobre"><span class="cards-num">2</span> <span class="cards-text">// projetos</span>
-                </div>
+                <div class="cards-sobre"><span class="cards-num">3</span> <span class="cards-text">// anos de xp</span></div>
+                <div class="cards-sobre"><span class="cards-num">2</span> <span class="cards-text">// projetos</span></div>
                 <div class="cards-sobre"><span class="cards-num">3</span> <span class="cards-text">// clt's</span></div>
                 <div class="cards-sobre"><span class="cards-num">∞</span> <span class="cards-text">// cafés</span></div>
             </div>
@@ -149,37 +129,14 @@
         <h1>Stack & tecnologias</h1>
 
         <div class="grid-habilidades">
-            <!-- Front-end -->
+            <!-- ALTERADO: containers com id para o JS renderizar -->
             <div>
                 <span class="hab-label">Front-end</span>
-                <div class="hab-item">
-                    <span class="hab-nome">React</span>
-                    <div class="hab-barra">
-                        <div class="hab-linha" style="width:70%;animation-delay:.1s"></div>
-                    </div>
-                    <span class="hab-porcentagem">70%</span>
-                </div>
-                <div class="hab-item">
-                    <span class="hab-nome">Java Script</span>
-                    <div class="hab-barra">
-                        <div class="hab-linha" style="width:75%;animation-delay:.2s"></div>
-                    </div>
-                    <span class="hab-porcentagem">75%</span>
-                </div>
-                <div class="hab-item">
-                    <span class="hab-nome">CSS / Tailwind</span>
-                    <div class="hab-barra">
-                        <div class="hab-linha" style="width:88%;animation-delay:.3s"></div>
-                    </div>
-                    <span class="hab-porcentagem">88%</span>
-                </div>
+                <div id="hab-frontend"></div>
             </div>
 
-            <!-- Ferramentas -->
             <div>
                 <span class="hab-label">Ferramentas</span>
-
-                <!-- Tecnologias -->
                 <div class="tech-soft">
                     <span class="hab-tech">API REST</span>
                     <span class="hab-tech">AWS</span>
@@ -194,37 +151,13 @@
                 </div>
             </div>
 
-            <!-- Back-end -->
             <div>
                 <span class="hab-label">back-end</span>
-
-                <div class="hab-item">
-                    <span class="hab-nome">Node.js</span>
-                    <div class="hab-barra">
-                        <div class="hab-linha" style="width:82%;animation-delay:.4s"></div>
-                    </div>
-                    <span class="hab-porcentagem">82%</span>
-                </div>
-                <div class="hab-item">
-                    <span class="hab-nome">Python</span>
-                    <div class="hab-barra">
-                        <div class="hab-linha" style="width:70%;animation-delay:.5s"></div>
-                    </div>
-                    <span class="hab-porcentagem">70%</span>
-                </div>
-                <div class="hab-item">
-                    <span class="hab-nome">TypeScript</span>
-                    <div class="hab-barra">
-                        <div class="hab-linha" style="width:75%;animation-delay:.6s"></div>
-                    </div>
-                    <span class="hab-porcentagem">75%</span>
-                </div>
+                <div id="hab-backend"></div>
             </div>
 
-            <!-- Estudando agora -->
             <div>
                 <span class="hab-label">Estudando agora</span>
-                <!-- Matérias diversas -->
                 <div class="tech-soft">
                     <span class="hab-soft">Estrutura de Dados</span>
                     <span class="hab-soft">Inglês</span>
@@ -237,8 +170,10 @@
         </div>
     </section>
 
-    <!-- Projetos -->
     <section id="projetos">
+        <span class="subtitulo-label">// 03 - Projetos</span>
+        <h1>O que eu construí</h1>
+        <!-- ALTERADO: container vazio, JS renderiza os cards -->
         <div class="cards-projetos" id="lista-projetos"></div>
     </section>
 
@@ -247,21 +182,17 @@
         <span class="subtitulo-label">// 03 — formação</span>
         <h1>Formação acadêmica</h1>
         <div class="educacao-grid">
-
             <div class="edu-card">
                 <span class="edu-form">Tecnólogo</span>
                 <div class="edu-curso">Desenvolvimento de Software Multiplataforma</div>
                 <div class="edu-ins">Fatec - Prof Jessen Vidal</div>
                 <div class="edu-periodo">// 08/2025 – 07/2028</div>
-                <!-- <div class="edu-desc">Descrição breve desta formação complementar relevante para sua área.</div> -->
             </div>
-
             <div class="edu-card">
                 <span class="edu-form">Curso técnico</span>
                 <div class="edu-curso">Técnico em Desenvolvimento de Sistemas</div>
                 <div class="edu-ins">Etec - Escola Técnica Estadual</div>
                 <div class="edu-periodo">// 02/2023 – 06/2024</div>
-                <!-- <div class="edu-desc">Descrição breve do curso, foco e principais disciplinas estudadas.</div> -->
             </div>
         </div>
     </section>
@@ -270,11 +201,11 @@
     <section id="cursos">
         <span class="subtitulo-label">// 04 — cursos & certificações</span>
         <h1>Cursos complementares</h1>
-        <!-- Lista dos cursos -->
+        <!-- ALTERADO: container vazio, JS renderiza os itens -->
         <div class="lista-cursos" id="lista-cursos"></div>
     </section>
 
-    <!-- Seção dos meus contatos -->
+    <!-- Contato -->
     <section id="contato">
         <span class="subtitulo-label">// 05 — contato</span>
         <h1 style="color: #F7F6F2;">Vamos construir algo juntos?</h1>
@@ -282,9 +213,7 @@
         <div class="contato-body">
             <div>
                 <p id="contato-desc">Estou sempre aberto a novos projetos, oportunidades ou uma boa
-                    conversa sobre tecnologia.
-                    Me manda uma mensagem!
-                </p>
+                    conversa sobre tecnologia. Me manda uma mensagem!</p>
                 <div class="contatos-links">
                     <a href="mailto:henriquemartins7t@gmail.com" class="contato-link">
                         <span class="clink-label">// email</span>
@@ -304,41 +233,126 @@
                 </div>
             </div>
 
-            <!-- Quadro cinza escuro -->
             <div class="codigo-contato">
-                <div class="cl-escuro cl" style="color:rgba(247,246,242,.7)"> <span class="cm">// envie uma
-                        mensagem</span>
-                </div>
-                <div class="cl-escuro cl" style="color:rgba(247,246,242,.7)"> <span class="fn">sendMessage</span> ({
-                </div>
-                <div class="cl-escuro cl" style="color:rgba(247,246,242,.7)"> &nbsp;&nbsp;<span class="pr"> from:
-                    </span>
-                    <span class="str"> "henriquemartin7t@gmail.com"
-                    </span>,
-                </div>
-                <div class="cl-escuro cl" style="color:rgba(247,246,242,.7)"> &nbsp;&nbsp;<span class="pr"> subject:
-                    </span> <span class="str"> "Projeto muito bom" </span> , </div>
-                <div class="cl-escuro cl" style="color:rgba(247,246,242,.7)"> &nbsp;&nbsp;<span class="pr"> body:
-                    </span>
-                    <span class="str"> `Oi! Quero... </span>
-                </div>
-                <div class="cl-escuro cl" style="color:rgba(247,246,242,.7)">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <span class="str"> falar contigo!` </span> ,
-                </div>
-                <div class="cl-escuro cl" style="color:rgba(247,246,242,.7)"> <span> }) </span> </div>
-                <div class="cl-escuro cl" style="color:rgba(247,246,242,.7)"> <span class="cm"> // resposta < 24h ✓
-                            </span>
-                </div>
+                <div class="cl-escuro cl" style="color:rgba(247,246,242,.7)"><span class="cm">// envie uma mensagem</span></div>
+                <div class="cl-escuro cl" style="color:rgba(247,246,242,.7)"><span class="fn">sendMessage</span> ({</div>
+                <div class="cl-escuro cl" style="color:rgba(247,246,242,.7)">&nbsp;&nbsp;<span class="pr">from: </span><span class="str"> "henriquemartin7t@gmail.com"</span>,</div>
+                <div class="cl-escuro cl" style="color:rgba(247,246,242,.7)">&nbsp;&nbsp;<span class="pr">subject: </span><span class="str"> "Projeto muito bom"</span>,</div>
+                <div class="cl-escuro cl" style="color:rgba(247,246,242,.7)">&nbsp;&nbsp;<span class="pr">body: </span><span class="str"> `Oi! Quero...</span></div>
+                <div class="cl-escuro cl" style="color:rgba(247,246,242,.7)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">falar contigo!`</span>,</div>
+                <div class="cl-escuro cl" style="color:rgba(247,246,242,.7)"><span>})</span></div>
+                <div class="cl-escuro cl" style="color:rgba(247,246,242,.7)"><span class="cm">// resposta &lt; 24h ✓</span></div>
             </div>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <span>© 2025 Henrique Moreia</span>
+        <!-- ALTERADO: id="footer-copy" para o easter egg de clique triplo -->
+        <span id="footer-copy" style="cursor:default">© 2025 Henrique Moreira</span>
         <span>Feito com muito ☕ &amp; JavaScript</span>
         <span>v1.0.0</span>
     </footer>
+
+
+    <!-- ==========================================
+         MODAL DE LOGIN (oculto por padrão)
+         ========================================== -->
+    <div id="modal-login">
+        <div class="modal-box">
+            <div class="modal-header">
+                <span class="modal-titulo"><span class="kw">admin</span>.<span class="fn">login</span>()</span>
+                <button class="modal-fechar" onclick="fecharModalLogin()">✕</button>
+            </div>
+            <div class="modal-body">
+                <label class="modal-label">// senha</label>
+                <input id="input-senha" type="password" class="modal-input" placeholder="••••••••••••">
+                <span id="login-erro" class="modal-erro">Senha incorreta. Tente novamente.</span>
+                <button class="modal-btn" onclick="tentarLogin()">Entrar</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ==========================================
+         PAINEL ADMIN (oculto por padrão)
+         ========================================== -->
+    <div id="painel-admin">
+        <div class="admin-painel-box">
+
+            <div class="admin-header">
+                <span class="admin-titulo">⚙️ Painel Admin</span>
+                <div style="display:flex;gap:10px;align-items:center;">
+                    <span id="admin-feedback" class="admin-feedback"></span>
+                    <button class="admin-logout" onclick="logout()">Sair</button>
+                    <button class="modal-fechar" onclick="fecharPainelAdmin()">✕</button>
+                </div>
+            </div>
+
+            <!-- Abas -->
+            <div class="admin-abas">
+                <button class="admin-aba-btn ativa" data-aba="aba-projetos"   onclick="trocarAba('aba-projetos')">Projetos</button>
+                <button class="admin-aba-btn"        data-aba="aba-cursos"    onclick="trocarAba('aba-cursos')">Cursos</button>
+                <button class="admin-aba-btn"        data-aba="aba-textos"    onclick="trocarAba('aba-textos')">Textos</button>
+                <button class="admin-aba-btn"        data-aba="aba-habilidades" onclick="trocarAba('aba-habilidades')">Habilidades</button>
+            </div>
+
+            <!-- Aba: Projetos -->
+            <div id="aba-projetos" class="admin-aba-conteudo">
+                <p class="admin-hint">Preencha os campos e clique em adicionar. Para remover, use o botão ✕ no card.</p>
+                <div class="admin-form">
+                    <input id="proj-emoji"  class="admin-input" type="text"  placeholder="Emoji (ex: 🚀)">
+                    <input id="proj-titulo" class="admin-input" type="text"  placeholder="Título *">
+                    <input id="proj-link"   class="admin-input" type="text"  placeholder="Link (Github ou live)">
+                    <textarea id="proj-desc" class="admin-input admin-textarea" placeholder="Descrição *"></textarea>
+                    <input id="proj-techs"  class="admin-input" type="text"  placeholder="Tecnologias (separadas por vírgula)">
+                    <button class="admin-btn-add" onclick="adicionarProjeto()">+ Adicionar Projeto</button>
+                </div>
+            </div>
+
+            <!-- Aba: Cursos -->
+            <div id="aba-cursos" class="admin-aba-conteudo" style="display:none">
+                <p class="admin-hint">Preencha os campos e clique em adicionar. Para remover, use o botão ✕ na lista.</p>
+                <div class="admin-form">
+                    <input id="curso-nome"      class="admin-input" type="text" placeholder="Nome do curso *">
+                    <input id="curso-provider"  class="admin-input" type="text" placeholder="Instituição *">
+                    <input id="curso-horas"     class="admin-input" type="text" placeholder="Carga horária (ex: 40h)">
+                    <input id="curso-ano-input" class="admin-input" type="text" placeholder="Ano (ex: 2025)">
+                    <button class="admin-btn-add" onclick="adicionarCurso()">+ Adicionar Curso</button>
+                </div>
+            </div>
+
+            <!-- Aba: Textos -->
+            <div id="aba-textos" class="admin-aba-conteudo" style="display:none">
+                <p class="admin-hint">Edite os textos principais. Deixe em branco para manter o atual.</p>
+                <div class="admin-form">
+                    <label class="admin-label-field">Subtítulo (abaixo do nome)</label>
+                    <input id="txt-subtitulo" class="admin-input" type="text" placeholder="// Desenvolvedor de Software">
+                    <label class="admin-label-field">Descrição (seção de apresentação)</label>
+                    <textarea id="txt-descricao" class="admin-input admin-textarea" placeholder="Desenvolvedor full stack..."></textarea>
+                    <label class="admin-label-field">Sobre mim (1º parágrafo) — aceita HTML</label>
+                    <textarea id="txt-sobre" class="admin-input admin-textarea" placeholder="Sou um desenvolvedor..."></textarea>
+                    <button class="admin-btn-add" onclick="salvarTextos()">💾 Salvar Textos</button>
+                </div>
+            </div>
+
+            <!-- Aba: Habilidades -->
+            <div id="aba-habilidades" class="admin-aba-conteudo" style="display:none">
+                <p class="admin-hint">Adicione habilidades ao front-end ou back-end. Para remover, use o botão ✕ na barra.</p>
+                <div class="admin-form">
+                    <select id="hab-grupo" class="admin-input">
+                        <option value="frontend">Front-end</option>
+                        <option value="backend">Back-end</option>
+                    </select>
+                    <input id="hab-nome-input" class="admin-input" type="text"   placeholder="Nome da habilidade *">
+                    <input id="hab-pct"        class="admin-input" type="number" placeholder="Nível % (1–100) *" min="1" max="100">
+                    <button class="admin-btn-add" onclick="adicionarHabilidade()">+ Adicionar Habilidade</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
 
     <script src="script.js"></script>
 </body>
