@@ -29,7 +29,7 @@
             </ul>
         </nav>
 
-        <span>Portfólio Henrique</span>
+        <span id="saudacao"></span>
     </header>
 
     <!-- Apresentação -->
@@ -91,6 +91,7 @@
         </div>
     </section>
 
+    <!-- Sobre mim -->
     <section id="sobre-mim">
         <div class="grid-sobre-mim">
             <div class="container-2">
@@ -232,92 +233,8 @@
         </div>
     </section>
 
-    <section id="projetos">
-        <span class="subtitulo-label">// 03 - Projetos</span>
-        <h1>O que eu construí</h1>
-
-        <div class="cards-projetos">
-            <!-- Cards dos projetos -->
-            <!-- OmniDevs -->
-            <div class="cards-proj-body">
-                <div class="cards-git-header">
-                    <div> 🚀 </div>
-                    <a href="https://github.com/DeveloperCorsair/API-Censo-2022">Github ↗</a>
-                </div>
-
-                <span class="proj-title">OmniDevs</span>
-                <span>
-                    Projeto de alunos da Fatec. Dedicado para ajudar a prefeitura de São José dos Campos na análise
-                    de dados sobre o censo da cidade.
-                </span>
-
-                <!-- Tecnologias OmniDevs -->
-                <div class="">
-                    <span class="hab-label">Tecnologias</span>
-                    <div class="tech-soft">
-                        <span class="hab-soft">Html & CSS</span>
-                        <span class="hab-soft">Java Script</span>
-                        <span class="hab-soft">Python</span>
-                        <span class="hab-soft">Flask</span>
-                        <span class="hab-soft">MySQL</span>
-                        <span class="hab-soft">Git</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tempero da Casa -->
-            <div class="cards-proj-body">
-                <div class="cards-git-header">
-                    <div> 🏡 </div>
-                    <a href="https://temperodacasa.vercel.app/">Github ↗</a>
-                </div>
-
-                <span class="proj-title">Tempero da Casa</span>
-                <span>
-                    Este é um projeto simples e funcional de um cardápio digital de cozinha, ideal para restaurantes,
-                    cozinhas industriais ou até mesmo uso doméstico
-                </span>
-
-                <!-- Tecnologias Tempero da Casa -->
-                <div class="">
-                    <span class="hab-label">Tecnologias</span>
-                    <div class="tech-soft">
-                        <span class="hab-soft">Html & CSS</span>
-                        <span class="hab-soft">Java Script</span>
-                        <span class="hab-soft">Git</span>
-                        <span class="hab-soft">Vercel</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- FinCash -->
-            <div class="cards-proj-body">
-                <div class="cards-git-header">
-                    <div> ⚡ </div>
-                    <a href="https://github.com/DeveloperCorsair/TCC-FINCASH-BACK-END">Github ↗</a>
-                </div>
-
-                <span class="proj-title">FinCash</span>
-                <span>
-                    Essa plataforma visa facilitar o controle e a organização das finanças pessoais e empresariais. uma
-                    maneira eficiente de gerenciar receitas, despesas.
-                </span>
-
-                <!-- Tecnologias FinCash -->
-                <div>
-                    <span class="hab-label">Tecnologias</span>
-                    <div class="tech-soft">
-                        <span class="hab-soft">React</span>
-                        <span class="hab-soft">Tailwind</span>
-                        <span class="hab-soft">Node.js</span>
-                        <span class="hab-soft">TypeScript</span>
-                        <span class="hab-soft">MongoDB</span>
-                        <span class="hab-soft">Git</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Projetos -->
+    <div class="cards-projetos" id="lista-projetos"></div>
 
     <!-- Educação -->
     <section id="educacao">
@@ -347,31 +264,8 @@
     <section id="cursos">
         <span class="subtitulo-label">// 04 — cursos & certificações</span>
         <h1>Cursos complementares</h1>
-        <div class="lista-cursos ">
-            <!-- Curso Scrum FGV -->
-            <div class="curso-item">
-                <div class="curso-col-esq">
-                    <div class="curso-nome">Introdução ao Scrum</div>
-                    <div class="curso-provider">Fundação Getúlio Vargas (FGV)</div>
-                </div>
-                <div class="curso-col-dir">
-                    <span class="curso-hora">10h</span>
-                    <span class="curso-ano">2025</span>
-                </div>
-            </div>
-
-            <!-- CS50X Harvard -->
-            <div class="curso-item">
-                <div class="curso-col-esq">
-                    <div class="curso-nome">CS50x: Introdução à Ciência da Computação</div>
-                    <div class="curso-provider"> Harvard University</div>
-                </div>
-                <div class="curso-col-dir">
-                    <span class="curso-horas">80h</span>
-                    <span class="curso-ano">2025</span>
-                </div>
-            </div>
-        </div>
+        <!-- Lista dos cursos -->
+        <div class="lista-cursos" id="lista-cursos"></div>
     </section>
 
     <!-- Seção dos meus contatos -->
