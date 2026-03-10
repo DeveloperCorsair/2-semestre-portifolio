@@ -526,7 +526,6 @@ h1 {
 /* Class Projetos */
 .cards-projetos {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
     margin-top: 40px;
