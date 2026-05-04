@@ -7,6 +7,7 @@ const {
   listarDestaques
 } = require("../controllers/projetosController");
 
+// IMPORTANTE: rota de destaque ANTES de /:id para não conflitar
 router.get("/destaque", listarDestaques);
 router.get("/", listarProjetos);
 router.get("/:id", buscarProjetoPorId);

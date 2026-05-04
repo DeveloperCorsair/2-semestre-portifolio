@@ -1,5 +1,5 @@
 // controllers/cursosController.js
-const cursos   = require("../data/cursos");
+const cursos = require("../data/cursos");
 
 // GET /api/cursos — lista todos
 const listarCursos = (req, res) => {

@@ -3,7 +3,7 @@ const express = require("express");
 const cors = require("cors");
 
 const projetosRoutes = require("./routes/projetos");
-const cursosRoutes  = require("./routes/cursos");
+const cursosRoutes = require("./routes/cursos");
 const contatoRoutes = require("./routes/contato");
 
 const app = express();
@@ -17,8 +17,8 @@ app.use(express.json());
 
 // ── Rotas ────────────────────────────────────────────────
 app.use("/api/projetos", projetosRoutes);
-app.use("/api/cursos",   cursosRoutes);
-app.use("/api/contato",  contatoRoutes);
+app.use("/api/cursos", cursosRoutes);
+app.use("/api/contato", contatoRoutes);
 
 // ── Health check ─────────────────────────────────────────
 app.get("/", (req, res) => {
@@ -33,7 +33,13 @@ app.get("/", (req, res) => {
       "GET  /api/cursos",
       "GET  /api/cursos/:id",
       "GET  /api/cursos/categoria/:categoria",
-      "POST /api/contato"
+      "POST /api/contato",
+      "POST /api/cursos",
+      "POST /api/projetos",
+      "PUT  /api/cursos/1",
+      "PUT  /api/projetos/1",
+      "DELETE  /api/cursos/1",
+      "DELETE  /api/projetos/1"
     ]
   });
 });
