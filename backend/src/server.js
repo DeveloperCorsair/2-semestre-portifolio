@@ -1,5 +1,6 @@
 // server.js
 const express = require("express");
+const db = require('./db')
 const cors = require("cors");
 
 const projetosRoutes = require("./routes/projetos");
@@ -8,6 +9,19 @@ const contatoRoutes = require("./routes/contato");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+app.get('/projetos', async (req, res) => {
+  try {
+    const [rows] = await db.query('SELECT * from projetos');
+
+    res.json(rows);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({
+      erro: 'Erro no banco'
+    });
+  }
+});
 
 // ── Middlewares ──────────────────────────────────────────
 app.use(cors({
