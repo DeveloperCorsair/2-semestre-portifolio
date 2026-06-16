@@ -56,8 +56,6 @@ const projetosAPI = [
         problema: `A prefeitura de São José dos Campos precisava compreender o perfil socioeconômico da cidade com base nos dados do Censo 2022, mas as informações disponibilizadas pelo IBGE estavam distribuídas em múltiplos arquivos CSV de difícil interpretação. A ausência de uma ferramenta acessível obrigava os analistas a processar os dados manualmente em planilhas, tornando o processo lento e suscetível a erros.`,
         solucao: `Foi desenvolvida uma aplicação web que importa, processa e exibe os dados do Censo 2022 de forma visual e interativa. A plataforma permite que os analistas filtrem informações por região, faixa etária e indicadores socioeconômicos, exibindo os resultados em gráficos e tabelas responsivas. O back-end em Python/Flask processa os CSVs do IBGE e expõe uma API REST consumida pelo front-end em HTML, CSS e JavaScript puro.`,
         tipoSistema: "web",
-        imagemSolucao: "",
-        imagemAlt: "Tela da plataforma de análise",
         linkRepo: "https://github.com/OmniDevsOficial/API-Censo-2022",
         tecnologias: [
             { nome: "HTML & CSS", onde: "Estrutura e estilização das páginas da plataforma web" },
@@ -88,7 +86,43 @@ const projetosAPI = [
             }
         ]
     },
-    // Adicione mais projetos API aqui
+    {
+        semestre: "2º Semestre — 2026-1",
+        titulo: "Plataforma do Conteúdo Técnico de Normas Aeronáuticas",
+        empresaParceira: "Akaer",
+        problema: `O desafio consiste em desenvolver uma plataforma web estruturada para centralizar, organizar e correlacionar requisitos normativos, técnicos e de engenharia, com o objetivo de facilitar a consulta e o acesso a informações críticas para a equipe de engenharia da empresa. Atualmente, os dados estão dispersos em múltiplos documentos e planilhas, tornando a busca por informações específicas lenta e propensa a erros.`,
+        solucao: ` O sistema visa transformar o processo atual, que é manual e descentralizado, em uma fonte de dados organizada que reduza o tempo de busca e o risco de inconsistências no uso de versões obsoletas, apoiando a equipe de administradores e visualizadores. A plataforma permitirá que os administradores cadastrem, editem e organizem os requisitos normativos, técnicos e de engenharia em uma interface web intuitiva. Os visualizadores poderão acessar essas informações de forma rápida, utilizando filtros e buscas avançadas para localizar requisitos específicos. Além disso, a plataforma oferecerá recursos de correlação entre diferentes requisitos, permitindo que os usuários compreendam as interdependências e impactos das normas em seus projetos.`,
+        tipoSistema: "web",
+        linkRepo: "https://github.com/OmniDevsOficial/API-Akaer",
+        tecnologias: [
+            { nome: "React", onde: "Criação da interface e componentes do usuário" },
+            { nome: "HTML & CSS", onde: "Estrutura e estilização das páginas da plataforma web" },
+            { nome: "TypeScript", onde: "Interatividade, requisições à API e renderização dos gráficos" },
+            { nome: "Prisma", onde: "Intermediário para interação com o banco de dados" },
+            { nome: "MySQL", onde: "Armazenamento dos dados processados do Censo" },
+            { nome: "Git", onde: "Versionamento do código e colaboração em equipe" }
+        ],
+        papelScrum: "Scrum Master",
+        contribuicoes: `Neste projeto atuei como Scrum Master e fui responsável pela gestão do backlog, organização das sprints e facilitação das reuniões do time.`,
+        hardSkills: [
+            { tech: "React", nivel: "ajuda" },
+            { tech: "HTML & CSS", nivel: "autonomia" },
+            { tech: "TypeScript", nivel: "autonomia" },
+            { tech: "Prisma", onde: "ajuda" },
+            { tech: "MySQL", nivel: "ajuda" },
+            { tech: "Git", nivel: "autonomia" }
+        ],
+        softSkills: [
+            {
+                skill: "Resolução de problemas",
+                exemplo: `Durante o desenvolvimento da plataforma, identifiquei um conflito entre as dependências do projeto, que estava causando erros de compilação. Realizei uma análise detalhada e implementei uma solução que envolveu a atualização das versões das bibliotecas e a reconfiguração do arquivo de build, resolvendo o problema de forma eficiente.`
+            },
+            {
+                skill: "Comunicação",
+                exemplo: `Em uma reunião de sprint planning, um membro do time expressou dúvidas sobre a priorização de uma user story. Usei minha habilidade de comunicação para explicar os critérios de priorização baseados no valor para o cliente e na complexidade técnica, facilitando o entendimento e alinhamento do time em relação às prioridades do projeto.`
+            }
+        ]
+    },
 ];
 
 

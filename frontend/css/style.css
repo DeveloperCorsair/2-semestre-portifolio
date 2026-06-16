@@ -772,304 +772,286 @@ footer span {
 }
 
 #projetos-api {
-    padding: 80px 60px;
+    background-color: #1A1A18;
+    padding: 70px 60px;
+    margin: 0;
 }
-
+ 
+/* Override do subtitulo-label p/ fundo escuro */
+#projetos-api .subtitulo-label {
+    color: rgba(255, 255, 255, 0.3);
+}
+ 
+/* Override do h1 p/ fundo escuro */
+#projetos-api h1 {
+    color: #F7F6F2;
+}
+ 
 .api-proj-lista {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 16px;
     margin-top: 40px;
 }
-
-/* Card principal do projeto */
+ 
+/* Card principal */
 .api-card {
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 12px;
     overflow: hidden;
-    background: rgba(255, 255, 255, 0.02);
-    transition: border-color 0.2s;
+    background: rgba(255, 255, 255, 0.03);
+    transition: border-color 0.25s, background 0.25s, transform 0.2s;
 }
-
+ 
 .api-card:hover {
-    border-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.22);
+    background: rgba(255, 255, 255, 0.055);
+    transform: translateY(-2px);
 }
-
-/* Header do card (sempre visível) */
+ 
+/* Header clicável */
 .api-card-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 24px;
+    padding: 22px 26px;
     cursor: pointer;
     gap: 16px;
     list-style: none;
+    transition: background 0.2s;
 }
-
-.api-card-header::-webkit-details-marker {
-    display: none;
+ 
+.api-card-header::-webkit-details-marker { display: none; }
+ 
+.api-card-header:hover {
+    background: rgba(255, 255, 255, 0.04);
 }
-
-.api-card-header::hover {
-    color: #ffcc00;
-}
-
+ 
 .api-card-meta {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 5px;
     flex: 1;
 }
-
+ 
+/* Semestre — label menor, discreta */
 .api-card-semestre {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
-    color: #7c7c7c;
-    letter-spacing: 0.05em;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.3);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
-
+ 
+/* Título do projeto — principal, bem destacado */
 .api-card-titulo {
     font-family: 'Syne', sans-serif;
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 700;
     color: #F7F6F2;
+    line-height: 1.2;
+    letter-spacing: -0.2px;
 }
-
+ 
+/* Empresa parceira — secundário */
 .api-card-empresa {
     font-size: 13px;
-    color: #9a9a9a;
+    color: rgba(255, 255, 255, 0.4);
+    font-family: 'DM Sans', sans-serif;
 }
-
+ 
+/* Botão + / × */
 .api-card-toggle {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 20px;
-    color: #7c7c7c;
+    font-size: 22px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.3);
     transition: transform 0.25s, color 0.2s;
     flex-shrink: 0;
     user-select: none;
+    line-height: 1;
 }
-
+ 
 details[open] .api-card-toggle {
     transform: rotate(45deg);
     color: #F7F6F2;
 }
-
+ 
 /* Corpo expansível */
 .api-card-body {
-    padding: 0 24px 24px;
+    padding: 24px 26px 28px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 24px;
     border-top: 1px solid rgba(255, 255, 255, 0.07);
 }
-
-/* Label de seção interna */
+ 
+/* Campo (wrapper de label + conteúdo) */
+.api-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+ 
+/* Labels de seção (PROBLEMA, SOLUÇÃO, etc.) — destaque em azul */
 .api-label {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    color: #6b6b6b;
+    font-size: 10px;
+    color: #2A6EF5;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-bottom: 6px;
-    display: block;
+    letter-spacing: 0.12em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
-
+ 
+/* Texto corrido */
 .api-text {
     font-family: 'DM Sans', sans-serif;
     font-size: 15px;
-    color: #c8c8c8;
-    line-height: 1.7;
+    color: rgba(247, 246, 242, 0.7);
+    line-height: 1.75;
+    margin: 0;
+    white-space: pre-line;
 }
-
-/* Tags de tipo de sistema */
+ 
+/* Badge do tipo de sistema (web/desktop/app) */
 .api-tipo-badge {
     display: inline-block;
     font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    padding: 3px 10px;
+    font-size: 10px;
+    padding: 2px 9px;
     border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    color: #b0b0b0;
-    margin-top: 8px;
+    border: 1px solid rgba(42, 110, 245, 0.4);
+    color: #2A6EF5;
+    text-transform: lowercase;
+    vertical-align: middle;
 }
-
-/* Link do repositório */
+ 
+/* Link do repositório — visível e clicável */
 .api-repo-link {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
+    gap: 7px;
     font-family: 'JetBrains Mono', monospace;
-    font-size: 13px;
+    font-size: 12px;
     color: #F7F6F2;
     text-decoration: none;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    padding: 8px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 9px 16px;
     border-radius: 8px;
-    transition: border-color 0.2s, background 0.2s;
+    transition: border-color 0.2s, background 0.2s, color 0.2s;
     width: fit-content;
-}
-
-.api-repo-link:hover {
-    border-color: rgba(255, 255, 255, 0.35);
     background: rgba(255, 255, 255, 0.04);
 }
-
+ 
+.api-repo-link:hover {
+    border-color: rgba(255, 255, 255, 0.45);
+    background: rgba(255, 255, 255, 0.09);
+    color: #fff;
+}
+ 
+.api-repo-link svg {
+    opacity: 0.7;
+    flex-shrink: 0;
+}
+ 
 /* Tabela de tecnologias */
 .api-tech-table {
     width: 100%;
     border-collapse: collapse;
     font-size: 14px;
 }
-
+ 
 .api-tech-table tr {
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
-
+ 
 .api-tech-table tr:last-child {
     border-bottom: none;
 }
-
+ 
 .api-tech-table td {
-    padding: 8px 0;
+    padding: 9px 0;
     vertical-align: top;
-    color: #c8c8c8;
+    color: rgba(247, 246, 242, 0.6);
+    line-height: 1.5;
 }
-
+ 
 .api-tech-table td:first-child {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 13px;
+    font-size: 12px;
     color: #F7F6F2;
     white-space: nowrap;
-    padding-right: 20px;
-    width: 160px;
+    padding-right: 24px;
+    width: 150px;
 }
-
-/* Hard Skills — níveis de proficiência */
+ 
+/* Hard Skills */
 .api-hs-grid {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
 }
-
+ 
 .api-hs-item {
     display: flex;
     align-items: center;
     gap: 12px;
 }
-
+ 
 .api-hs-nome {
     font-family: 'JetBrains Mono', monospace;
     font-size: 13px;
     color: #F7F6F2;
-    width: 160px;
+    width: 150px;
     flex-shrink: 0;
 }
-
+ 
 .api-hs-nivel {
-    font-size: 12px;
-    padding: 3px 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    padding: 3px 11px;
     border-radius: 20px;
     border: 1px solid;
 }
-
-.nivel-ouvi {
-    color: #7c7c7c;
-    border-color: #3a3a3a;
-}
-
-.nivel-ajuda {
-    color: #9a9a9a;
-    border-color: #4a4a4a;
-}
-
-.nivel-autonomia {
-    color: #c8c8c8;
-    border-color: rgba(255, 255, 255, 0.2);
-}
-
-.nivel-ensino {
-    color: #F7F6F2;
-    border-color: rgba(255, 255, 255, 0.4);
-    background: rgba(255, 255, 255, 0.04);
-}
-
+ 
+.nivel-ouvi     { color: rgba(255,255,255,0.25); border-color: rgba(255,255,255,0.1); }
+.nivel-ajuda    { color: rgba(255,255,255,0.45); border-color: rgba(255,255,255,0.18); }
+.nivel-autonomia{ color: rgba(255,255,255,0.75); border-color: rgba(255,255,255,0.3); }
+.nivel-ensino   { color: #F7F6F2; border-color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.06); }
+ 
 /* Soft Skills */
 .api-ss-lista {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
 }
-
+ 
 .api-ss-item {
-    border-left: 2px solid rgba(255, 255, 255, 0.15);
-    padding-left: 14px;
+    border-left: 2px solid rgba(42, 110, 245, 0.4);
+    padding-left: 16px;
 }
-
+ 
 .api-ss-nome {
     font-family: 'Syne', sans-serif;
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 15px;
+    font-weight: 700;
     color: #F7F6F2;
-    margin-bottom: 4px;
+    margin-bottom: 5px;
 }
-
+ 
 .api-ss-exemplo {
     font-size: 13px;
-    color: #9a9a9a;
-    line-height: 1.6;
-}
-
-/* Toggle interno (Detalhes) */
-.api-details-inner {
-    margin-top: 8px;
-}
-
-.api-details-inner>summary {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
-    color: #6b6b6b;
-    cursor: pointer;
-    list-style: none;
-    user-select: none;
-}
-
-.api-details-inner>summary::before {
-    content: '▶ ';
-    font-size: 10px;
-}
-
-details[open].api-details-inner>summary::before {
-    content: '▼ ';
-}
-
-.api-details-inner>summary::-webkit-details-marker {
-    display: none;
-}
-
-.api-details-content {
-    margin-top: 10px;
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    padding: 14px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 13px;
-    color: #9a9a9a;
+    color: rgba(247, 246, 242, 0.55);
     line-height: 1.7;
-    white-space: pre-wrap;
 }
-
-/* Divisor interno entre campos */
-.api-field {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
+ 
 /* Imagem da solução */
 .api-solucao-img {
     width: 100%;
     max-width: 600px;
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.08);
-    margin-top: 10px;
+    margin-top: 8px;
 }
