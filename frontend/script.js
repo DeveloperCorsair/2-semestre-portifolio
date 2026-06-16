@@ -1,4 +1,6 @@
-// DADOS — projetos e cursos em arrays de objetos
+// ============================================
+// DADOS — projetos pessoais (cards simples)
+// ============================================
 
 const projetos = [
     {
@@ -42,9 +44,56 @@ const cursos = [
     }
 ];
 
+// ============================================
+// DADOS — projetos API (portfólio acadêmico)
+// ============================================
+
+const projetosAPI = [
+    {
+        semestre: "1º Semestre — 2025-2",
+        titulo: "Plataforma de Análise de Dados do Censo 2022",
+        empresaParceira: "Fatec – Prof. Massanori",
+        problema: `A prefeitura de São José dos Campos precisava compreender o perfil socioeconômico da cidade com base nos dados do Censo 2022, mas as informações disponibilizadas pelo IBGE estavam distribuídas em múltiplos arquivos CSV de difícil interpretação. A ausência de uma ferramenta acessível obrigava os analistas a processar os dados manualmente em planilhas, tornando o processo lento e suscetível a erros.`,
+        solucao: `Foi desenvolvida uma aplicação web que importa, processa e exibe os dados do Censo 2022 de forma visual e interativa. A plataforma permite que os analistas filtrem informações por região, faixa etária e indicadores socioeconômicos, exibindo os resultados em gráficos e tabelas responsivas. O back-end em Python/Flask processa os CSVs do IBGE e expõe uma API REST consumida pelo front-end em HTML, CSS e JavaScript puro.`,
+        tipoSistema: "web",
+        imagemSolucao: "",
+        imagemAlt: "Tela da plataforma de análise",
+        linkRepo: "https://github.com/OmniDevsOficial/API-Censo-2022",
+        tecnologias: [
+            { nome: "HTML & CSS", onde: "Estrutura e estilização das páginas da plataforma web" },
+            { nome: "JavaScript", onde: "Interatividade, requisições à API e renderização dos gráficos" },
+            { nome: "Python", onde: "Processamento e limpeza dos arquivos CSV do Censo" },
+            { nome: "Flask", onde: "Framework web para criação da API REST" },
+            { nome: "MySQL", onde: "Armazenamento dos dados processados do Censo" },
+            { nome: "Git", onde: "Versionamento do código e colaboração em equipe" }
+        ],
+        papelScrum: "Desenvolvedor",
+        contribuicoes: `Neste projeto atuei como Desenvolvedor e fui responsável pelo desenvolvimento do back-end em Python e Flask, incluindo os scripts de leitura e limpeza dos arquivos CSV fornecidos pelo IBGE e a criação dos endpoints da API REST consumidos pelo front-end. Modelei as tabelas do banco de dados MySQL para armazenar os dados processados e implementei as queries de filtragem por região e faixa etária. No front-end, integrei os gráficos utilizando a biblioteca Chart.js, consumindo os dados via Fetch API. Contribuí também com a criação do backlog no Jira e a definição das User Stories junto ao time.`,
+        hardSkills: [
+            { tech: "HTML & CSS", nivel: "autonomia" },
+            { tech: "JavaScript", nivel: "autonomia" },
+            { tech: "Python", nivel: "ajuda" },
+            { tech: "Flask", onde: "ajuda" },
+            { tech: "MySQL", nivel: "ajuda" },
+            { tech: "Git", nivel: "autonomia" }
+        ],
+        softSkills: [
+            {
+                skill: "Resolução de problemas",
+                exemplo: `Durante o processamento dos CSVs do Censo, identificamos que diferentes arquivos usavam encodings distintos (UTF-8 e Latin-1), o que gerava erros silenciosos nos dados importados. Mapeei o problema, documentei os arquivos afetados e implementei uma função de detecção automática de encoding usando a biblioteca chardet, eliminando os erros sem intervenção manual a cada importação.`
+            },
+            {
+                skill: "Comunicação",
+                exemplo: `Em uma sprint review, o cliente questionou por que determinados bairros não apareciam nos filtros. Usei minha capacidade de comunicação técnica para explicar que os dados do IBGE agrupavam esses bairros sob subdistrito e propus adaptar os filtros da interface para refletir a nomenclatura oficial, o que foi aceito e implementado na sprint seguinte.`
+            }
+        ]
+    },
+    // Adicione mais projetos API aqui
+];
+
 
 // ============================================
-// 1) ESTRUTURA DE DECISÃO — saudação por horário 
+// 1) ESTRUTURA DE DECISÃO — saudação por horário
 // ============================================
 
 function exibirSaudacao() {
@@ -64,7 +113,7 @@ function exibirSaudacao() {
 
 
 // ============================================
-// 2) FUNÇÃO + REPETIÇÃO — renderiza projetos 
+// 2) FUNÇÃO + REPETIÇÃO — renderiza projetos simples
 // ============================================
 
 function renderizarProjetos() {
@@ -74,7 +123,6 @@ function renderizarProjetos() {
     for (let i = 0; i < projetos.length; i++) {
         const p = projetos[i];
 
-        // Gera as tags de tecnologia com um loop interno
         let tagsHTML = "";
         for (let j = 0; j < p.tecnologias.length; j++) {
             tagsHTML += `<span class="hab-soft">${p.tecnologias[j]}</span>`;
@@ -99,7 +147,7 @@ function renderizarProjetos() {
 
 
 // ============================================
-// 3) FUNÇÃO + REPETIÇÃO — renderiza cursos 
+// 3) FUNÇÃO + REPETIÇÃO — renderiza cursos
 // ============================================
 
 function renderizarCursos() {
@@ -108,7 +156,6 @@ function renderizarCursos() {
 
     for (let i = 0; i < cursos.length; i++) {
         const c = cursos[i];
-
         const isUltimo = i === cursos.length - 1;
 
         container.innerHTML += `
@@ -128,9 +175,140 @@ function renderizarCursos() {
 
 
 // ============================================
-// INICIALIZAÇÃO — roda tudo ao carregar a página
+// 4) FUNÇÃO — renderiza projetos API
+// ============================================
+
+const NIVEL_LABEL = {
+    "ouvi": "ouvi falar",
+    "ajuda": "faço com ajuda",
+    "autonomia": "faço com autonomia",
+    "ensino": "consigo ensinar"
+};
+
+const NIVEL_CLASS = {
+    "ouvi": "nivel-ouvi",
+    "ajuda": "nivel-ajuda",
+    "autonomia": "nivel-autonomia",
+    "ensino": "nivel-ensino"
+};
+
+function escaparHTML(str) {
+    return String(str)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+}
+
+function renderizarProjetosAPI() {
+    const container = document.getElementById("lista-projetos-api");
+    if (!container) return;
+    container.innerHTML = "";
+
+    projetosAPI.forEach((p) => {
+
+        let techRows = "";
+        p.tecnologias.forEach(t => {
+            techRows += `
+                <tr>
+                    <td>${escaparHTML(t.nome)}</td>
+                    <td>${escaparHTML(t.onde)}</td>
+                </tr>`;
+        });
+
+        let hsItems = "";
+        p.hardSkills.forEach(h => {
+            const nivel = h.nivel || h.onde || "ajuda"; // fallback caso venha campo errado
+            const cls = NIVEL_CLASS[nivel] || "nivel-ajuda";
+            const label = NIVEL_LABEL[nivel] || nivel;
+            hsItems += `
+                <div class="api-hs-item">
+                    <span class="api-hs-nome">${escaparHTML(h.tech)}</span>
+                    <span class="api-hs-nivel ${cls}">${label}</span>
+                </div>`;
+        });
+
+        let ssItems = "";
+        p.softSkills.forEach(s => {
+            ssItems += `
+                <div class="api-ss-item">
+                    <div class="api-ss-nome">${escaparHTML(s.skill)}</div>
+                    <div class="api-ss-exemplo">${escaparHTML(s.exemplo)}</div>
+                </div>`;
+        });
+
+        const imgHTML = p.imagemSolucao
+            ? `<img src="${escaparHTML(p.imagemSolucao)}" alt="${escaparHTML(p.imagemAlt || '')}" class="api-solucao-img">`
+            : "";
+
+        container.innerHTML += `
+            <div class="api-card">
+                <details>
+                    <summary class="api-card-header">
+                        <div class="api-card-meta">
+                            <span class="api-card-semestre">// ${escaparHTML(p.semestre)}</span>
+                            <span class="api-card-titulo">${escaparHTML(p.titulo)}</span>
+                            <span class="api-card-empresa">${escaparHTML(p.empresaParceira)}</span>
+                        </div>
+                        <span class="api-card-toggle">+</span>
+                    </summary>
+
+                    <div class="api-card-body">
+
+                        <div class="api-field">
+                            <span class="api-label">Problema</span>
+                            <p class="api-text">${escaparHTML(p.problema)}</p>
+                        </div>
+
+                        <div class="api-field">
+                            <span class="api-label">Solução <span class="api-tipo-badge">${escaparHTML(p.tipoSistema)}</span></span>
+                            <p class="api-text">${escaparHTML(p.solucao)}</p>
+                            ${imgHTML}
+                        </div>
+
+                        <div class="api-field">
+                            <span class="api-label">Repositório</span>
+                            <a href="${escaparHTML(p.linkRepo)}" target="_blank" rel="noopener" class="api-repo-link">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                </svg>
+                                ${escaparHTML(p.linkRepo.replace("https://", ""))}
+                            </a>
+                        </div>
+
+                        <div class="api-field">
+                            <span class="api-label">Tecnologias Utilizadas</span>
+                            <table class="api-tech-table">${techRows}</table>
+                        </div>
+
+                        <div class="api-field">
+                            <span class="api-label">Contribuições Pessoais — papel: ${escaparHTML(p.papelScrum)}</span>
+                            <p class="api-text">${escaparHTML(p.contribuicoes)}</p>
+                        </div>
+
+                        <div class="api-field">
+                            <span class="api-label">Hard Skills</span>
+                            <div class="api-hs-grid">${hsItems}</div>
+                        </div>
+
+                        <div class="api-field">
+                            <span class="api-label">Soft Skills</span>
+                            <div class="api-ss-lista">${ssItems}</div>
+                        </div>
+
+                    </div>
+                </details>
+            </div>
+        `;
+    });
+}
+
+
+// ============================================
+// INICIALIZAÇÃO
 // ============================================
 
 exibirSaudacao();
 renderizarProjetos();
 renderizarCursos();
+renderizarProjetosAPI();

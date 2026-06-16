@@ -770,3 +770,306 @@ footer span {
     margin-bottom: 40px;
     line-height: 1.8;
 }
+
+#projetos-api {
+    padding: 80px 60px;
+}
+
+.api-proj-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 40px;
+}
+
+/* Card principal do projeto */
+.api-card {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.02);
+    transition: border-color 0.2s;
+}
+
+.api-card:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Header do card (sempre visível) */
+.api-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    cursor: pointer;
+    gap: 16px;
+    list-style: none;
+}
+
+.api-card-header::-webkit-details-marker {
+    display: none;
+}
+
+.api-card-header::hover {
+    color: #ffcc00;
+}
+
+.api-card-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+}
+
+.api-card-semestre {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: #7c7c7c;
+    letter-spacing: 0.05em;
+}
+
+.api-card-titulo {
+    font-family: 'Syne', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #F7F6F2;
+}
+
+.api-card-empresa {
+    font-size: 13px;
+    color: #9a9a9a;
+}
+
+.api-card-toggle {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 20px;
+    color: #7c7c7c;
+    transition: transform 0.25s, color 0.2s;
+    flex-shrink: 0;
+    user-select: none;
+}
+
+details[open] .api-card-toggle {
+    transform: rotate(45deg);
+    color: #F7F6F2;
+}
+
+/* Corpo expansível */
+.api-card-body {
+    padding: 0 24px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+/* Label de seção interna */
+.api-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: #6b6b6b;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.api-text {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    color: #c8c8c8;
+    line-height: 1.7;
+}
+
+/* Tags de tipo de sistema */
+.api-tipo-badge {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #b0b0b0;
+    margin-top: 8px;
+}
+
+/* Link do repositório */
+.api-repo-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: #F7F6F2;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: border-color 0.2s, background 0.2s;
+    width: fit-content;
+}
+
+.api-repo-link:hover {
+    border-color: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+/* Tabela de tecnologias */
+.api-tech-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.api-tech-table tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.api-tech-table tr:last-child {
+    border-bottom: none;
+}
+
+.api-tech-table td {
+    padding: 8px 0;
+    vertical-align: top;
+    color: #c8c8c8;
+}
+
+.api-tech-table td:first-child {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: #F7F6F2;
+    white-space: nowrap;
+    padding-right: 20px;
+    width: 160px;
+}
+
+/* Hard Skills — níveis de proficiência */
+.api-hs-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.api-hs-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.api-hs-nome {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: #F7F6F2;
+    width: 160px;
+    flex-shrink: 0;
+}
+
+.api-hs-nivel {
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    border: 1px solid;
+}
+
+.nivel-ouvi {
+    color: #7c7c7c;
+    border-color: #3a3a3a;
+}
+
+.nivel-ajuda {
+    color: #9a9a9a;
+    border-color: #4a4a4a;
+}
+
+.nivel-autonomia {
+    color: #c8c8c8;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.nivel-ensino {
+    color: #F7F6F2;
+    border-color: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+/* Soft Skills */
+.api-ss-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.api-ss-item {
+    border-left: 2px solid rgba(255, 255, 255, 0.15);
+    padding-left: 14px;
+}
+
+.api-ss-nome {
+    font-family: 'Syne', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #F7F6F2;
+    margin-bottom: 4px;
+}
+
+.api-ss-exemplo {
+    font-size: 13px;
+    color: #9a9a9a;
+    line-height: 1.6;
+}
+
+/* Toggle interno (Detalhes) */
+.api-details-inner {
+    margin-top: 8px;
+}
+
+.api-details-inner>summary {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: #6b6b6b;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+}
+
+.api-details-inner>summary::before {
+    content: '▶ ';
+    font-size: 10px;
+}
+
+details[open].api-details-inner>summary::before {
+    content: '▼ ';
+}
+
+.api-details-inner>summary::-webkit-details-marker {
+    display: none;
+}
+
+.api-details-content {
+    margin-top: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 14px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: #9a9a9a;
+    line-height: 1.7;
+    white-space: pre-wrap;
+}
+
+/* Divisor interno entre campos */
+.api-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* Imagem da solução */
+.api-solucao-img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    margin-top: 10px;
+}
